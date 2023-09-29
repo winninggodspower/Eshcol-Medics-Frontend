@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .navlink{
+      @apply block py-2 pl-3 pr-4 font-normal text-white border-gray-700 rounded md:p-0 md:dark:hover:text-blue-500 opacity-70 hover:bg-gray-700 hover:text-white md:hover:bg-transparent;
+    }
+    .login-botton{
+      @apply px-14 py-[0.6rem] mr-3 text-sm font-medium text-center bg-blue-600 rounded-lg md:block text-black hover:bg-blue-700 focus:ring-blue-800 focus:ring-4 focus:outline-none md:mr-0 ;
+    }
+    nav ul li a.active{
+      @apply opacity-100;
+    }
+  }

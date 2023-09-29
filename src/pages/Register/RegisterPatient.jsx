@@ -1,11 +1,10 @@
 
-
 function RegisterPatient() {
     return (
         <main className="md:flex ">
-            <section id="side-bar" className=" hidden md:block w-2/5 bg-[url(doctor-with-patient.png)]" >
+            <section id="side-bar" className="hidden w-2/5 md:block text-white bg-[url(assets/register-background.png)]" >
                 <div>
-                    <h2>Gain access to 11k+ patients from all over Africa</h2>
+                    <h2 className="text-4xl">Gain access to 11k+ patients from all over Africa</h2>
                     <ul>
                         <li><img src="Frame.svg" alt="" />
                             premium e-medical tools
@@ -21,7 +20,7 @@ function RegisterPatient() {
                 </div>
             </section>
 
-            <section>
+            <section className="md:w-auto">
                 <h3>Patient register</h3>
                 <p>And gain access to 400k worldwide medical specialists medical freedom</p>
 
