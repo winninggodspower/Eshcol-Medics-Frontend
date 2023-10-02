@@ -18,6 +18,13 @@
     nav ul li a.active{
       @apply opacity-100;
     }
+    .input-hover{
+      @apply border-secondary outline-none ring-secondary;
+    }
+
+    .custom-input{
+      @apply border-[1px] mb-5 border-grey-3 input-hover focus:input-hover;
+    }
   }
 
 .register-img{
