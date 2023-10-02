@@ -1,6 +1,6 @@
 import { Form } from "react-router-dom";
 import checkIcon from "../../assets/check-icon.svg";
-import RegisterSidebar from "./RegisterSidebar";
+import RegisterSidebar from "../../components/RegisterLoginSidebar";
 
 function RegisterPatient() {
     return (

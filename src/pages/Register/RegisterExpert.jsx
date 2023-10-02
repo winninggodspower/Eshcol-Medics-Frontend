@@ -1,5 +1,5 @@
 import { Form } from "react-router-dom";
-import RegisterSidebar from "./RegisterSidebar";
+import RegisterSidebar from "../../components/RegisterLoginSidebar";
 
 function RegisterExpert() {
   return (
