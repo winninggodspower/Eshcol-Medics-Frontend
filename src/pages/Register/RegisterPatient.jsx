@@ -5,7 +5,7 @@ import RegisterSidebar from "./RegisterSidebar";
 function RegisterPatient() {
     return (
         <main className="md:flex font-raleway md:h-[calc(100vh-3rem)]">
-            <RegisterSidebar btnColor={'bg-main'} points={['premium e-medical tools', 'advanced payment schedules', '24hrs customer service']}/>
+            <RegisterSidebar points={['premium e-medical tools', 'advanced payment schedules', '24hrs customer service']} btnClass={'bg-main'} btnText={'Login as a medical expert'} />
 
             <section className="grid w-full md:w-3/5 bg-grey">
                 <div className="w-full md:w-[65%] m-auto bg-white py-10">

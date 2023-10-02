@@ -1,8 +1,7 @@
 import checkIcon from "../../assets/check-icon.svg";
 
-function RegisterSidebar({points, btnColor}) {
+function RegisterSidebar({points, btnClass, btnText}) {
 
-    // console.log(points);
   return (
     <section id="side-bar" className="register-img hidden w-2/5 md:block text-white h-full" >
         <div className="mt-[6rem] w-[80%] mx-auto ">
@@ -17,7 +16,7 @@ function RegisterSidebar({points, btnColor}) {
                 }
                
             </ul>
-            <a className={`btn ${btnColor} rounded-md`} href="">Login as a patient</a>
+            <a className={`btn ${btnClass} `} href="">{btnText}</a>
         </div>
     </section>
   )
