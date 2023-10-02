@@ -1,18 +1,17 @@
 import { Form } from "react-router-dom";
-import checkIcon from "../../assets/check-icon.svg";
 import RegisterSidebar from "./RegisterSidebar";
 
-function RegisterPatient() {
-    return (
-        <main className="md:flex font-raleway md:h-[calc(100vh-3rem)]">
-            <RegisterSidebar btnColor={'bg-main'} points={['premium e-medical tools', 'advanced payment schedules', '24hrs customer service']}/>
+function RegisterExpert() {
+  return (
+    <main className="md:flex font-raleway md:h-[calc(100vh-3rem)]">
+            <RegisterSidebar points={["Fully registered and certified","24hrs check up time", "24hrs customer service"]} btnColor={'bg-secondary'} />
 
             <section className="grid w-full md:w-3/5 bg-grey">
                 <div className="w-full md:w-[65%] m-auto bg-white py-10">
                     
                     <div className="grid items-center w-10/12 md:w-[23.3rem] md:max-w-[90%] mx-auto">
-                        <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Patient register</h3>
-                        <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
+                        <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Expert register</h3>
+                        <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">gain access to patients from all over Africa</p>
 
                         <Form className="flex flex-col items-center w-full mt-9 font-inter overflow-auto" action="" method="post">
                             
@@ -29,12 +28,11 @@ function RegisterPatient() {
 
                             <input className="custom-input w-full h-11 bg-grey-2 rounded-md " type="password" placeholder="Password" />
 
-                            <button className="w-full md:w-[min(24.7rem, 100%)] mt-5 rounded-md btn bg-secondary" type="submit">Register as a patient</button>
+                            <button className="w-full md:w-[min(24.7rem, 100%)] mt-5 rounded-md btn bg-secondary md:bg-main [text-wrap:balance]" type="submit">Register as a medical expert</button>
                         </Form>
 
                         <div className="mt-10">
                             <a className="block text-center text-grey-5" href="">Already have an account? Login</a>
-                            <a className="block text-center text-grey-5" href="">Need emergency help?</a>
                         </div>
                     </div>
 
@@ -42,7 +40,7 @@ function RegisterPatient() {
 
             </section>
         </main>
-    )
+  )
 }
 
-export default RegisterPatient;
+export default RegisterExpert;

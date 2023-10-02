@@ -7,13 +7,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootLayout from './layouts/RootLayout';
+
+// pages
 import RegisterPatient from './pages/Register/RegisterPatient';
+import RegisterExpert from './pages/Register/RegisterExpert';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout/>}>
       <Route path='/register'>
         <Route path='patient' element={<RegisterPatient/>} />
+        <Route path='expert' element={<RegisterExpert/>} />
       </Route>
     </Route>
   )
