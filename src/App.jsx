@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Navbar from './components/Navbar';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -11,6 +10,8 @@ import RootLayout from './layouts/RootLayout';
 // pages
 import RegisterPatient from './pages/Register/RegisterPatient';
 import RegisterExpert from './pages/Register/RegisterExpert';
+import LoginPatient from './pages/Login/LoginPatient';
+import LoginExpert from './pages/Login/LoginExpert';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,10 @@ const router = createBrowserRouter(
       <Route path='/register'>
         <Route path='patient' element={<RegisterPatient/>} />
         <Route path='expert' element={<RegisterExpert/>} />
+      </Route>
+      <Route path='/login'>
+        <Route path='patient' element={<LoginPatient/>} />
+        <Route path='expert' element={<LoginExpert/>} />
       </Route>
     </Route>
   )
