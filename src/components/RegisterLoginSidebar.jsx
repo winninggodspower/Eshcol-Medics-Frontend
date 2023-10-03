@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import checkIcon from "../assets/check-icon.svg";
 
-function RegisterSidebar({points, btnClass, btnText}) {
+function RegisterSidebar({points, btnClass, btnText, btnUrl}) {
 
   return (
     <section id="side-bar" className="register-img hidden w-2/5 md:block text-white h-full" >
@@ -16,7 +17,7 @@ function RegisterSidebar({points, btnClass, btnText}) {
                 }
                
             </ul>
-            <a className={`btn ${btnClass} `} href="">{btnText}</a>
+            <Link className={`btn ${btnClass} `} to={btnUrl}>{btnText}</Link>
         </div>
     </section>
   )

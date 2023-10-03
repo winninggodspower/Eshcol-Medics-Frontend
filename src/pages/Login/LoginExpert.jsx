@@ -1,10 +1,10 @@
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import RegisterSidebar from "../../components/RegisterLoginSidebar";
 
 function LoginExpert() {
   return (
     <main className="md:flex font-raleway md:h-[calc(100vh-3rem)]">
-            <RegisterSidebar points={["Fully registered and certified","24hrs check up time", "24hrs customer service"]} btnClass={'bg-secondary rounded-md'} btnText={'Login as a patient'} />
+            <RegisterSidebar points={["Fully registered and certified","24hrs check up time", "24hrs customer service"]} btnClass={'bg-secondary rounded-md'} btnText={'Login as a patient'} btnUrl={'/login/patient'}/>
 
         <section className="grid w-full md:w-3/5 bg-grey">
             <div className="w-full md:w-[65%] m-auto bg-white py-10">
@@ -23,7 +23,7 @@ function LoginExpert() {
                     </Form>
 
                     <div className="mt-10">
-                        <a className="block text-center text-grey-5" href="">Don’t have an account? Register</a>
+                        <Link className="block text-center text-grey-5" to="/register/expert">Don’t have an account? Register</Link>
                         <a className="block text-center text-grey-5" href="">Forgot password?</a>
                     </div>
                 </div>
