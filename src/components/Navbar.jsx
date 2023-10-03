@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Link } from "react-router-dom"
 import siteLogo from "../assets/site-logo.png"
 
 function Navbar() {
@@ -10,10 +10,10 @@ function Navbar() {
                 <img src={siteLogo} className="h-[3.125rem] mr-3" alt="Eshcol-Medics Logo" />
             </a>
             <div className="flex md:order-2">
-                <button type="button"
+                <Link type="button"
                     className="hidden login-botton md:block"
-                    style={{backgroundColor: "white"}}>Login
-                </button>
+                    style={{backgroundColor: "white"}} to={'/login'}>Login
+                </Link>
                 <button data-collapse-toggle="navbar-cta" type="button"
                     className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-400 rounded-lg md:hidden focus:outline-none focus:ring-2 hover:bg-gray-700focus:ring-gray-600 "
                     aria-controls="navbar-cta" aria-expanded="false">
@@ -57,10 +57,10 @@ function Navbar() {
                             className="navlink">Ambulance
                             services</a>
                     </li>
-                    <button type="button"
+                    <Link type="button"
                         className="login-botton md:hidden"
-                        style={{backgroundColor: "white"}}>Login
-                    </button>
+                        style={{backgroundColor: "white"}} to={'/login'}>Login
+                    </Link>
                 </ul>
             </div>
         </div>
