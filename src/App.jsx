@@ -1,10 +1,8 @@
-import { useState } from 'react'
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
-  redirect,
 } from "react-router-dom";
 import RootLayout from './layouts/RootLayout';
 
@@ -32,8 +30,6 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <RouterProvider router={router} />
   )
