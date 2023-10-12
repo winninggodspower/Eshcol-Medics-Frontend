@@ -30,8 +30,8 @@ function Navbar() {
                 <div className="relative px-4 mt-4 md:mt-0">
                     {/* search icon svg */}
                     <svg className='absolute text-xl text-white translate-y-1/2 bottom-1/2 focus:outline-0' width="19" height="19" viewBox="0 0 19 19" fill="none">
-                        <circle cx="8.625" cy="8.625" r="7" stroke="white" strokWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M13.4375 13.8383L17.8125 18.2134" stroke="white" strokWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <circle cx="8.625" cy="8.625" r="7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13.4375 13.8383L17.8125 18.2134" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     <input className=' pl-8 bg-transparent border-0 border-b w-full md:w-[10.7rem] text-white' placeholder='Search' type="text" name="" id="" />
                 </div>
