@@ -4,7 +4,10 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+
+// layouts
 import RootLayout from './layouts/RootLayout';
+import DashboardLayout from "./layouts/DashboardLayout";
 
 // pages
 import RegisterPatient from './pages/Register/RegisterPatient';
@@ -24,6 +27,9 @@ const router = createBrowserRouter(
         <Route index element={<LoginPatient/>} />
         <Route path='patient' element={<LoginPatient/>} />
         <Route path='expert' element={<LoginExpert/>} />
+      </Route>
+      <Route path="/dashboard" element={<DashboardLayout/>}>
+        
       </Route>
     </Route>
   )
