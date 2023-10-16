@@ -13,7 +13,7 @@ function RegisterExpert() {
                     <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Expert register</h3>
                     <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">gain access to patients from all over Africa</p>
 
-                    <Form className="flex flex-col items-center w-full mt-9 font-inter overflow-auto" action="" method="post">
+                    <Form className="form" action="" method="post">
                         
                         <input className=" custom-input w-full h-11 bg-grey-2 rounded-md" type="email" name="" id="" placeholder="Email Address" />
 
@@ -28,7 +28,7 @@ function RegisterExpert() {
 
                         <input className="custom-input w-full h-11 bg-grey-2 rounded-md " type="password" placeholder="Password" />
 
-                        <button className="w-full md:w-[min(24.7rem, 100%)] mt-5 rounded-md btn bg-secondary md:bg-main [text-wrap:balance]" type="submit">Register as a medical expert</button>
+                        <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary md:bg-main [text-wrap:balance]" type="submit">Register as a medical expert</button>
                     </Form>
 
                     <div className="mt-10">

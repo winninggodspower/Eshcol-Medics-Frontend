@@ -23,7 +23,11 @@
     }
 
     .custom-input{
-      @apply border-[1px] mb-5 border-grey-3 input-hover focus:input-hover;
+      @apply border-[1px] mt-5 border-grey-3 input-hover focus:input-hover;
+    }
+
+    .form{
+      @apply flex flex-col items-center w-full overflow-auto font-inter mt-4;
     }
   }
 

@@ -13,13 +13,13 @@ function LoginPatient() {
                         <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Patient Login</h3>
                         <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
 
-                        <Form className="flex flex-col items-center w-full mt-9 font-inter overflow-auto" action="" method="post">
+                        <Form className="form" action="" method="post">
                             
                             <input className=" custom-input w-full h-11 bg-grey-2 rounded-md" type="email" name="email" placeholder="Email Address" />
 
                             <input className="custom-input w-full h-11 bg-grey-2 rounded-md " type="password" name="password" placeholder="Password" />
 
-                            <button className="w-full md:w-[min(24.7rem, 100%)] mt-5 rounded-md btn bg-secondary" type="submit">Login as a patient</button>
+                            <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary" type="submit">Login as a patient</button>
                         </Form>
 
                         <div className="mt-10">
