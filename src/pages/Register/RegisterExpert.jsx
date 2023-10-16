@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 function RegisterExpert() {
 
     const {register, handleSubmit, setError, 
-        formState: {errors}} = useForm({
+        formState: {errors, isSubmitting}} = useForm({
             defaultValues: {
                 email: '',
                 phone_number: '',
@@ -27,8 +27,7 @@ function RegisterExpert() {
                     <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">gain access to patients from all over Africa</p>
 
                     <form className="form" onSubmit={handleSubmit((data)=>{
-                            let response = handleFormRegister(data, setError, true);
-                            response? redirect('/dashboard'): null
+                            handleFormRegister(data, setError, is_expert=true);
                     })}>
                         <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                         <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
@@ -46,7 +45,7 @@ function RegisterExpert() {
                         <input className="w-full rounded-md custom-input h-11 bg-grey-2 " type="password" {...register('password', {required: "This field is required"})} placeholder="Password" />
                         <p className="w-full text-start text-red-600" >{errors.password?.message}</p>
 
-                        <button className="w-full md:w-[min(24.7rem, 100%)] rounded-md mt-9 btn bg-secondary" type="submit">Register as a patient</button>
+                        <button className="w-full md:w-[min(24.7rem, 100%)] rounded-md mt-9 btn bg-secondary" type="submit" disabled={isSubmitting} >Register as a patient</button>
                 </form>
 
                     <div className="mt-10">

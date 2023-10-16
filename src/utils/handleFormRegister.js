@@ -1,4 +1,5 @@
 import axios from "axios";
+import { redirect } from "react-router-dom";
 
 const baseURL = "http://127.0.0.1:8000/";
 
@@ -13,7 +14,7 @@ async function handleFormRegister(data, setError, is_expert=false) {
 
         if (response.status === 201){
             console.log('redirecting to dashboard');
-            return true
+            return redirect('/dashboard');
         }
         else {
             setMultipleError(res.data, setError);

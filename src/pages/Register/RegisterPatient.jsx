@@ -1,4 +1,4 @@
-import { Link, redirect} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useForm } from "react-hook-form";
 import RegisterSidebar from "../../components/RegisterLoginSidebar";
 import handleFormRegister from "../../utils/handleFormRegister";
@@ -6,7 +6,7 @@ import handleFormRegister from "../../utils/handleFormRegister";
 function RegisterPatient() {
 
     const {register, handleSubmit, setError, 
-            formState: {errors}} = useForm({
+            formState: {errors, isSubmitting}} = useForm({
                 defaultValues: {
                     email: '',
                     phone_number: '',
@@ -26,8 +26,7 @@ function RegisterPatient() {
                         <p className="text-base font-normal text-center md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
 
                         <form className="form" onSubmit={handleSubmit((data)=>{
-                            let response = handleFormRegister(data, setError);
-                            response? redirect('/dashboard'): none
+                            handleFormRegister(data, setError);
                         })}>
                             <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                             <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
@@ -45,7 +44,7 @@ function RegisterPatient() {
                             <input className="w-full rounded-md custom-input h-11 bg-grey-2 " type="password" {...register('password', {required: "This field is required"})} placeholder="Password" />
                             <p className="w-full text-start text-red-600" >{errors.password?.message}</p>
 
-                            <button className="w-full md:w-[min(24.7rem, 100%)] rounded-md mt-9 btn bg-secondary" type="submit">Register as a patient</button>
+                            <button className="w-full md:w-[min(24.7rem, 100%)] rounded-md mt-9 btn bg-secondary" type="submit" disabled={isSubmitting}>Register as a patient</button>
                         </form>
 
                         <div className="mt-10">
