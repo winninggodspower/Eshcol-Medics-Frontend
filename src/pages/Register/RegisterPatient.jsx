@@ -25,8 +25,8 @@ function RegisterPatient() {
                         <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Patient register</h3>
                         <p className="text-base font-normal text-center md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
 
-                        <form className="form" onSubmit={handleSubmit((data)=>{
-                            handleFormRegister(data, setError);
+                        <form className="form" onSubmit={handleSubmit(async (data)=>{
+                            await handleFormRegister(data, setError);
                         })}>
                             <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                             <p className="w-full text-start text-red-600" >{errors.email?.message}</p>

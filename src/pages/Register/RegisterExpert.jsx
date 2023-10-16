@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 function RegisterExpert() {
 
     const {register, handleSubmit, setError, 
-        formState: {errors, isSubmitting}} = useForm({
+        formState: {errors, isSubmitting, isLoading}} = useForm({
             defaultValues: {
                 email: '',
                 phone_number: '',
@@ -26,8 +26,8 @@ function RegisterExpert() {
                     <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Expert register</h3>
                     <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">gain access to patients from all over Africa</p>
 
-                    <form className="form" onSubmit={handleSubmit((data)=>{
-                            handleFormRegister(data, setError, is_expert=true);
+                    <form className="form" onSubmit={handleSubmit(async (data)=>{
+                            await handleFormRegister(data, setError, true);
                     })}>
                         <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                         <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
