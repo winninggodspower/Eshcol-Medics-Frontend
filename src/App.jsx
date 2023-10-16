@@ -10,7 +10,7 @@ import RootLayout from './layouts/RootLayout';
 import DashboardLayout from "./layouts/DashboardLayout";
 
 // pages
-import RegisterPatient, { RegisterPatientAction } from './pages/Register/RegisterPatient';
+import RegisterPatient from './pages/Register/RegisterPatient';
 import RegisterExpert from './pages/Register/RegisterExpert';
 import LoginPatient from './pages/Login/LoginPatient';
 import LoginExpert from './pages/Login/LoginExpert';
@@ -20,7 +20,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout/>}>
       <Route path='/register'>
         <Route index element={<RegisterPatient/>} />
-        <Route path='patient' element={<RegisterPatient/>} action={RegisterPatientAction}/>
+        <Route path='patient' element={<RegisterPatient/>} />
         <Route path='expert' element={<RegisterExpert/>} />
       </Route>
       <Route path='/login'>

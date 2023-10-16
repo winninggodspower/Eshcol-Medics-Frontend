@@ -1,12 +1,18 @@
-import { Form, Link, redirect, useActionData } from "react-router-dom";
+import { Link, redirect} from "react-router-dom";
+import { useForm } from "react-hook-form";
 import RegisterSidebar from "../../components/RegisterLoginSidebar";
-import axios from "axios";
-
-const baseURL = "http://127.0.0.1:8000/";
+import handleFormRegister from "../../utils/handleFormRegister";
 
 function RegisterPatient() {
 
-    const data = useActionData(); 
+    const {register, handleSubmit, setError, 
+            formState: {errors}} = useForm({
+                defaultValues: {
+                    email: '',
+                    phone_number: '',
+                    password: '',
+                }
+            });
 
     return (
         <main className="md:flex font-raleway md:h-[calc(100vh-3rem)]">
@@ -19,12 +25,12 @@ function RegisterPatient() {
                         <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Patient register</h3>
                         <p className="text-base font-normal text-center md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
 
-                        <Form className="form" action="/register/patient" method="post">
-                            
-                            <input className="w-full rounded-md custom-input h-11 bg-grey-2" type="email" name="email" placeholder="Email Address" required/>
-                            {data?.data?.email && data.data.email.map((message)=>{
-                                return <span className="text-start w-full">{message}</span>
-                            })}
+                        <form className="form" onSubmit={handleSubmit((data)=>{
+                            let response = handleFormRegister(data, setError);
+                            response? redirect('/dashboard'): none
+                        })}>
+                            <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
+                            <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
 
                             <div className="grid grid-cols-[minmax(0,6.5rem)_minmax(0,1fr)] w-full group">
                                 <select className="border-r-0 rounded-md rounded-r-none custom-input group-focus-within:input-hover bg-grey-4 " name="phone_country_code" >
@@ -32,16 +38,15 @@ function RegisterPatient() {
                                     <option value="">+22</option>
                                     <option value="">+235</option>
                                 </select>
-                                <input className="border-l-0 rounded-md rounded-l-none custom-input group-focus-within:input-hover bg-grey-2" type="number" name="phone_number" placeholder="Phone number" required/>
+                                <input className="border-l-0 rounded-md rounded-l-none custom-input group-focus-within:input-hover bg-grey-2" type="number" {...register('phone_number', {required: "This field is required"})} placeholder="Phone number"/>
                             </div>
-                            {data?.data?.phone_number && data.data.phone_number.map((message)=>{
-                                return <span className="text-start w-full">{message}</span>
-                            })}
+                            <p className="w-full text-start text-red-600" >{errors.phone_number?.message}</p>
 
-                            <input className="w-full rounded-md custom-input h-11 bg-grey-2 " type="password" name="password" placeholder="Password" required/>
+                            <input className="w-full rounded-md custom-input h-11 bg-grey-2 " type="password" {...register('password', {required: "This field is required"})} placeholder="Password" />
+                            <p className="w-full text-start text-red-600" >{errors.password?.message}</p>
 
                             <button className="w-full md:w-[min(24.7rem, 100%)] rounded-md mt-9 btn bg-secondary" type="submit">Register as a patient</button>
-                        </Form>
+                        </form>
 
                         <div className="mt-10">
                             <Link className="block text-center text-grey-5" to="/login/patient">Already have an account? Login</Link>
@@ -57,32 +62,4 @@ function RegisterPatient() {
 }
 
 
-async function RegisterPatientAction({request}){
-    const data = await request.formData();
-
-    try {
-        let response = await axios.post(baseURL + 'api/auth/register/', {
-            email: data.get('email'),
-            phone_number: data.get('phone_number'),
-            password: data.get('password'),
-        });
-
-        if (response.status === 201){
-            return redirect('/dashboard');
-        }
-        else {
-            console.log(response);
-            return response;
-        }
-
-
-    } catch (error) {
-        console.log(error.response);
-        return error.response;
-    }
-
-}
-
-
 export default RegisterPatient;
-export { RegisterPatientAction };
