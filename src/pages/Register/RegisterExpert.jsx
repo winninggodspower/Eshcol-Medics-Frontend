@@ -29,7 +29,7 @@ function RegisterExpert() {
                     <form className="form" onSubmit={handleSubmit(async (data)=>{
                             await handleFormRegister(data, setError, true);
                     })}>
-                        <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
+                        <input className="w-full rounded-md custom-input h-11 bg-grey-2 " type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                         <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
 
                         <div className="grid grid-cols-[minmax(0,6.5rem)_minmax(0,1fr)] w-full group">
