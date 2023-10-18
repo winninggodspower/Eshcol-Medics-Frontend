@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 function RegisterExpert() {
 
     const {register, handleSubmit, setError, 
-        formState: {errors, isSubmitting, isLoading}} = useForm({
+        formState: {errors, isSubmitting}} = useForm({
             defaultValues: {
                 email: '',
                 phone_number: '',

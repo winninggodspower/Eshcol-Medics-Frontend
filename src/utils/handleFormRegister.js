@@ -1,11 +1,9 @@
-import axios from "axios";
 import { redirect } from "react-router-dom";
-
-const baseURL = "http://127.0.0.1:8000/";
+import customBackendApi from "./customBackendApi";
 
 async function handleFormRegister(data, setError, is_expert=false) {
     try {
-        let response = await axios.post(baseURL + 'api/auth/register/', {
+        let response = await customBackendApi.post('/auth/register/', {
             email: data.email,
             phone_number: data.phone_number,
             password: data.password,
