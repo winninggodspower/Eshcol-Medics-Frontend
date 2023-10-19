@@ -6,9 +6,9 @@ function Navbar() {
   return (
     <nav className="bg-secondary font-inter" >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-[0.6rem]">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
                 <img src={siteLogo} className="h-[3.125rem] mr-3" alt="Eshcol-Medics Logo" />
-            </a>
+            </Link>
             <div className="flex md:order-2">
                 <Link type="button"
                     className="hidden login-botton md:block"
