@@ -9,4 +9,15 @@ const customBackendApi = axios.create({
   },
 });
 
+customBackendApi.interceptors.request.use(
+  (config)=>{
+    const accessToken = "" // get access token from store
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`;
+    }
+    return config;
+}, (error)=>{
+    return Promise.reject(error);
+})
+
 export default customBackendApi;

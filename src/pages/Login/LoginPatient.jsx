@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import RegisterSidebar from "../../components/RegisterLoginSidebar";
 import handleFormLogin from "../../utils/handleFormLogin";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { setCredentails } from "../../redux/authSlice";
 
 
 function LoginPatient() {
+
+    const auth = useSelector(state => state.auth);
+    const dispatch = useDispatch();
     
     const {register, handleSubmit, setError, clearErrors,
         formState: {errors, isSubmitting}} = useForm();
@@ -22,24 +27,27 @@ function LoginPatient() {
                     
                     <div className="grid items-center w-10/12 md:w-[23.3rem] md:max-w-[90%] mx-auto">
                         <h3 className="font-raleway font-semibold text-2xl sm:text-3xl text-center md:text-[2rem] opacity-90 mb-1">Patient Login</h3>
-                        <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
+                        <p className="text-base font-normal text-center md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
 
                         <form className="form"  onSubmit={handleSubmit(async (data)=>{
-                            await handleFormLogin(data, setError, clearErrors);
+                            let response = await handleFormLogin(data, setError, clearErrors);
+                            if (response) {
+                                dispatch(setCredentails({refreshToken: response.refresh, accessToken: response.access}));
+                            }
                         })}>
                             
                             { errors.notRegisteredInput && 
-                                <div className="p-4 mb-4 text-sm text-red-800 font-medium rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                                <div className="p-4 mb-4 text-sm font-medium text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
                                      {errors.notRegisteredInput.message}
                                 </div>
                             }
 
-                            <input className="custom-input w-full h-11 bg-grey-2 rounded-md" {...register('email', {required: 'This field is required', onChange: clearNonFieldError})} type="email" placeholder="Email Address" />
-                            <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
+                            <input className="w-full rounded-md custom-input h-11 bg-grey-2" {...register('email', {required: 'This field is required', onChange: clearNonFieldError})} type="email" placeholder="Email Address" />
+                            <p className="w-full text-red-600 text-start" >{errors.email?.message}</p>
 
 
-                            <input className="custom-input w-full h-11 bg-grey-2 rounded-md" {...register('password', {required: 'This field is required', onChange: clearNonFieldError})} type="password" placeholder="Password" />
-                            <p className="w-full text-start text-red-600" >{errors.password?.message}</p>
+                            <input className="w-full rounded-md custom-input h-11 bg-grey-2" {...register('password', {required: 'This field is required', onChange: clearNonFieldError})} type="password" placeholder="Password" />
+                            <p className="w-full text-red-600 text-start" >{errors.password?.message}</p>
 
                             <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary" type="submit" >Login as a patient</button>
                         </form>

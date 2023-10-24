@@ -13,7 +13,7 @@ async function handleFormLogin(data, setError, clearErrors) {
             // save to user state
             clearErrors();
             console.log(response.data);
-            return redirect('/dashboard');
+            return response.data;
         }
         else {
             setError("notRegisteredInput", {
