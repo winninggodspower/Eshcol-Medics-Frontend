@@ -12,7 +12,6 @@ async function handleFormLogin(data, setError, clearErrors) {
         if (response.status === 200){
             // save to user state
             clearErrors();
-            console.log(response.data);
             return response.data;
         }
         else {

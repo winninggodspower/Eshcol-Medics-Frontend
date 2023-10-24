@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import RegisterSidebar from "../../components/RegisterLoginSidebar";
 import handleFormLogin from "../../utils/handleFormLogin";
 import { useForm } from "react-hook-form";
@@ -8,6 +8,7 @@ import { setCredentails } from "../../redux/authSlice";
 
 function LoginPatient() {
 
+    const navigate = useNavigate();
     const auth = useSelector(state => state.auth);
     const dispatch = useDispatch();
     
@@ -33,6 +34,7 @@ function LoginPatient() {
                             let response = await handleFormLogin(data, setError, clearErrors);
                             if (response) {
                                 dispatch(setCredentails({refreshToken: response.refresh, accessToken: response.access}));
+                                navigate('/dashboard');
                             }
                         })}>
                             
@@ -51,6 +53,7 @@ function LoginPatient() {
 
                             <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary" type="submit" >Login as a patient</button>
                         </form>
+
 
                         <div className="mt-10">
                             <Link className="block text-center text-grey-5" to="/register/patient">Don't have an account? Register</Link>
