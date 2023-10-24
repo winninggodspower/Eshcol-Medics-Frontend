@@ -51,7 +51,6 @@ function LoginPatient() {
 
                             <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary" type="submit" >Login as a patient</button>
                         </form>
-                        <p>{isSubmitting? "form is submitting": "form is domant"}</p>
 
                         <div className="mt-10">
                             <Link className="block text-center text-grey-5" to="/register/patient">Don't have an account? Register</Link>
