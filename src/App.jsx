@@ -14,6 +14,7 @@ import RegisterPatient from './pages/Register/RegisterPatient';
 import RegisterExpert from './pages/Register/RegisterExpert';
 import LoginPatient from './pages/Login/LoginPatient';
 import LoginExpert from './pages/Login/LoginExpert';
+import ProtectedRoute from "./utils/protectedRoute";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,8 +29,8 @@ const router = createBrowserRouter(
         <Route path='patient' element={<LoginPatient/>} />
         <Route path='expert' element={<LoginExpert/>} />
       </Route>
-      <Route path="/dashboard" element={<DashboardLayout/>}>
-
+      <Route path="/dashboard" element={<ProtectedRoute element={<DashboardLayout/>} />}>
+        
       </Route>
     </Route>
   )

@@ -1,9 +1,10 @@
-import React from 'react'
+import DashboardSideBar from "../components/DashboardSideBar";
+
 
 function DashboardLayout() {
   return (
-    <div>
-      <h1 className='mt-5 text-6xl text-center'>This is the dashboard</h1>
+    <div className="border-t-4">
+      <DashboardSideBar />
     </div>
   )
 }

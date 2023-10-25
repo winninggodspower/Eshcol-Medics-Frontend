@@ -51,7 +51,7 @@ function LoginPatient() {
                             <input className="w-full rounded-md custom-input h-11 bg-grey-2" {...register('password', {required: 'This field is required', onChange: clearNonFieldError})} type="password" placeholder="Password" />
                             <p className="w-full text-red-600 text-start" >{errors.password?.message}</p>
 
-                            <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary" type="submit" >Login as a patient</button>
+                            <button className="w-full md:w-[min(24.7rem, 100%)] mt-9 rounded-md btn bg-secondary" type="submit" disabled={isSubmitting} >Login as a patient</button>
                         </form>
 
 
