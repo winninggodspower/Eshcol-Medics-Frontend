@@ -15,6 +15,7 @@ import RegisterExpert from './pages/Register/RegisterExpert';
 import LoginPatient from './pages/Login/LoginPatient';
 import LoginExpert from './pages/Login/LoginExpert';
 import ProtectedRoute from "./utils/protectedRoute";
+import RegisterIndividualOrHospital from "./pages/dashboard/Register/ExpertPages/RegisterAsIndividualOrHospital";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
         <Route path='expert' element={<LoginExpert/>} />
       </Route>
       <Route path="/dashboard" element={<ProtectedRoute element={<DashboardLayout/>} />}>
-        
+        <Route path="register-as-hospital-or-individual" element={<RegisterIndividualOrHospital/>}/>
       </Route>
     </Route>
   )

@@ -1,4 +1,4 @@
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate, useSearchParams } from "react-router-dom";
 import RegisterSidebar from "../../components/RegisterLoginSidebar";
 import handleFormLogin from "../../utils/handleFormLogin";
 import { useForm } from "react-hook-form";
@@ -9,6 +9,8 @@ import { setCredentails } from "../../redux/authSlice";
 function LoginPatient() {
 
     const navigate = useNavigate();
+    let [searchParams, setSearchParams] = useSearchParams();
+
     const auth = useSelector(state => state.auth);
     const dispatch = useDispatch();
     
@@ -34,7 +36,9 @@ function LoginPatient() {
                             let response = await handleFormLogin(data, setError, clearErrors);
                             if (response) {
                                 dispatch(setCredentails({refreshToken: response.refresh, accessToken: response.access}));
-                                navigate('/dashboard');
+
+                                // redirect to the redirect query param if it's available else redirect to the dashboard
+                                searchParams.get('redirect') ? navigate(searchParams.get('redirect')) : navigate('/dashboard')
                             }
                         })}>
                             
