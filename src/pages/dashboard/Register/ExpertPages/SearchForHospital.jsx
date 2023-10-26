@@ -7,7 +7,7 @@ function SearchForHospital() {
     let [searchResult, setSearchResult] = useState(false);
 
     return (
-        <section className="w-full max-w-[90%] mx-auto font-inter min-h-[calc(100vh-7.6rem)] md:h-[calc(100vh-4.65rem)] ">
+        <section className="w-full max-w-[90%] mx-auto font-inter min-h-[calc(100vh-7.6rem)] md:min-h-[calc(100vh-4.65rem)] ">
 
             <div className='w-[33rem] max-w-[90%] h-full mx-auto flex flex-col  pb-5 md:pt-20 pt-20'>
                 
@@ -38,7 +38,7 @@ function SearchForHospital() {
 
                 </div>
 
-                <div className='flex justify-between mb-16'>
+                <div className='flex justify-between pb-16'>
                     <Link to={'/dashboard/register-as-hospital-or-individual'} className="btn-short bg-secondary">Back</Link>
                     <button className="btn-short bg-secondary">Continue</button>
                 </div>
