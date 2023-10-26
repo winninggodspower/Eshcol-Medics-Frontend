@@ -19,7 +19,7 @@
       @apply opacity-100;
     }
     .input-hover{
-      @apply border-secondary outline-none ring-secondary;
+      @apply outline-none border-secondary ring-secondary;
     }
 
     .custom-input{
@@ -27,7 +27,11 @@
     }
 
     .form{
-      @apply flex flex-col items-center w-full overflow-auto font-inter mt-4;
+      @apply flex flex-col items-center w-full mt-4 overflow-auto font-inter;
+    }
+
+    .register-as-circle{
+      @apply rounded-full w-[6.25rem] h-[6.25rem] md:w-[8rem] md:h-[8rem] grid place-items-center;
     }
   }
 

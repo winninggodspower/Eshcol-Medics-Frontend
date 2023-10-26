@@ -1,10 +1,12 @@
+import { Outlet } from "react-router-dom";
 import DashboardSideBar from "../components/DashboardSideBar";
 
 
 function DashboardLayout() {
   return (
-    <div className="border-t-4">
+    <div className="flex border-t-4">
       <DashboardSideBar />
+      <Outlet />
     </div>
   )
 }
