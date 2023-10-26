@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function DashboardSideBar() {
   return (
-    <aside className='w-full md:w-[30%] sm:w-2/6 md:min-w-fit md:h-[calc(100vh-4.65rem)] font-inter border-e-2 fixed -translate-x-full md:static md:translate-x-0'>
+    <aside className='w-full md:w-[30%] sm:w-2/6 md:min-w-fit md:h-[calc(100vh-4.65rem)] font-inter border-e-4 fixed -translate-x-full md:static md:translate-x-0'>
         <div className="flex items-center gap-5 py-6 ps-12">
             <img src={profileAvater} style={{width: "4.625rem"}} />
             <div className="">

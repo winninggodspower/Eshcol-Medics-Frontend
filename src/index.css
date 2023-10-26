@@ -15,6 +15,11 @@
     .btn{
       @apply px-12 py-2 text-center text-white font-inter;
     }
+
+    .btn-short{
+      @apply btn md:text-base text-[0.875rem] py-3 px-6 font-medium rounded-md leading-none;
+    }
+
     nav ul li a.active{
       @apply opacity-100;
     }
