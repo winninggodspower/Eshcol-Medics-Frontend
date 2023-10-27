@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function RegisterIndividualOrHospital() {
   return (
-    <section className="w-full max-w-[90%] mx-auto pb-5 md:pt-24 pt-24 font-inter min-h-[calc(100vh-7.6rem)] md:h-[calc(100vh-4.65rem)]">
+    <section className="w-full max-w-[90%] mx-auto pb-5 md:pt-20 pt-20 font-inter min-h-[calc(100vh-7.6rem)] md:h-[calc(100vh-4.65rem)]">
 
       <div className="mb-4 md:mb-16">
         <h3 className="pb-5 text-2xl font-semibold leading-none text-center font-railway md:pb-2">How do you want to register</h3>
@@ -28,7 +28,7 @@ function RegisterIndividualOrHospital() {
               </defs>
             </svg>
           </div>
-          <button className="px-0 py-0 text-black md:py-3 md:px-6 btn-short md:bg-secondary md:text-white">I work with a hospital</button>
+          <Link to={'/dashboard/search-for-hospital'} className="px-0 py-0 text-black md:py-3 md:px-6 btn-short md:bg-secondary md:text-white">I work with a hospital</Link>
         </div>
 
         <div className="hidden text-2xl font-semibold leading-none font-raleway md:block" >

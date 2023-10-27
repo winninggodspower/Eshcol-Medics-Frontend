@@ -28,12 +28,12 @@ function SearchForHospital() {
                     </div>
 
                     {searchResult?
-                    null :
-                    <div className='flex flex-col items-center gap-5 my-14 '>
-                        <img src={recordImage} alt="" className='mx-auto' />
-                        <p className='text-base leading-none opacity-70' >We didn’t find  the hospital you’re looking for</p>
-                        <button className="text-base btn-short bg-main">Register your hospital</button>
-                    </div>
+                        null :
+                        <div className='flex flex-col items-center gap-5 my-14 '>
+                            <img src={recordImage} alt="" className='mx-auto' />
+                            <p className='text-base leading-none opacity-70' >We didn’t find  the hospital you’re looking for</p>
+                            <Link to={'/dashboard/register-hospital'} className="text-base btn-short bg-main">Register your hospital</Link>
+                        </div>
                     }
 
                 </div>

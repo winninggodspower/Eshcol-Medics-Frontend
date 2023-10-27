@@ -9,14 +9,16 @@ import {
 import RootLayout from './layouts/RootLayout';
 import DashboardLayout from "./layouts/DashboardLayout";
 
+import ProtectedRoute from "./utils/protectedRoute";
+
 // pages
 import RegisterPatient from './pages/Register/RegisterPatient';
 import RegisterExpert from './pages/Register/RegisterExpert';
 import LoginPatient from './pages/Login/LoginPatient';
 import LoginExpert from './pages/Login/LoginExpert';
-import ProtectedRoute from "./utils/protectedRoute";
 import RegisterIndividualOrHospital from "./pages/dashboard/Register/ExpertPages/RegisterAsIndividualOrHospital";
 import SearchForHospital from "./pages/dashboard/Register/ExpertPages/SearchForHospital";
+import RegisterHospital from "./pages/dashboard/Register/ExpertPages/RegisterHospital";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +36,7 @@ const router = createBrowserRouter(
       <Route path="/dashboard" element={<ProtectedRoute element={<DashboardLayout/>} />}>
         <Route path="register-as-hospital-or-individual" element={<RegisterIndividualOrHospital/>}/>
         <Route path="search-for-hospital" element={<SearchForHospital/>}/>
+        <Route path="register-hospital" element={<RegisterHospital/>}/>
       </Route>
     </Route>
   )

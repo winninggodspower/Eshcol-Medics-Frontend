@@ -24,11 +24,11 @@
       @apply opacity-100;
     }
     .input-hover{
-      @apply outline-none border-secondary ring-secondary;
+      @apply outline-none border-2 border-secondary ring-0 border-opacity-50;
     }
 
     .custom-input{
-      @apply border-[1px] mt-5 border-grey-3 input-hover focus:input-hover;
+      @apply border-[1px] mt-5 border-grey-3 focus:input-hover;
     }
 
     .form{
