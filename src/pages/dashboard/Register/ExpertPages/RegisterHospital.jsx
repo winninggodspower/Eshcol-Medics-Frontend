@@ -9,14 +9,14 @@ function RegisterHospital() {
 
 
   return (
-    <section className="max-w-[90%] mx-auto font-inter min-h-[calc(100vh-7.6rem)] md:min-h-[calc(100vh-4.65rem)] ">
+    <section className="w-[90%] md:w-[70%] overflow-x-hidden mx-auto font-inter min-h-[calc(100vh-7.6rem)] md:min-h-[calc(100vh-4.65rem)] ">
 
             <div className='h-full flex flex-col items-center pb-5 pt-20 md:pt-9'>
                 
                 <div className="flex-grow w-[33rem] max-w-[90%]">
                     <h3 className="pb-8 text-2xl font-semibold leading-none text-center font-railway md:pb-12">Register Your Hospital</h3>
 
-                  <form action="" className="form">
+                  <form action="" className="form ">
 
                     <label className="w-full mb-7 text-base leading-none">
                       Hospital Name<span className="text-secondary">*</span>
@@ -48,9 +48,9 @@ function RegisterHospital() {
                     <div className="w-full mb-7 text-base leading-none">
                     Federal Ministry of Health certificate<span className="text-secondary">*</span>
                       
-                      <label className="rounded-md custom-input w-fit bg-grey-2 px-5 md:px-10 py-[0.62rem] md:py-6 mt-2 md:mt-4 flex items-center gap-3">
+                      <label className="rounded-md custom-input w-full bg-grey-2 px-5 md:px-10 py-[0.62rem] md:py-6 mt-2 md:mt-4 flex items-center gap-3">
                         <input className="hidden" type="file" {...register('minister_of_health_certificate', {required: 'This field is required'})}  />
-                        <img src={imageIcon} alt="image icon" />
+                        <img className="w-7 md:w-10" src={imageIcon} alt="image icon" />
                         <span className="text-sm ">Upload media</span>
                       </label>
                       <p className="w-full text-red-600 text-start " >{errors.minister_of_health_certificate?.message}</p>
@@ -61,7 +61,7 @@ function RegisterHospital() {
                       
                       <label className="rounded-md custom-input w-fit bg-grey-2 px-5 md:px-10 py-[0.62rem] md:py-6 mt-2 md:mt-4 flex items-center gap-3">
                         <input className="hidden" type="file" {...register('hospital_photography', {required: 'This field is required'})}  />
-                        <img src={imageIcon} alt="image icon" />
+                        <img className="w-7 md:w-10" src={imageIcon} alt="image icon" />
                         <span className="text-sm ">Upload media</span>
                       </label>
                       <p className="w-full text-red-600 text-start " >{errors.hospital_photography?.message}</p>
@@ -73,7 +73,7 @@ function RegisterHospital() {
 
                 <div className='flex justify-between pb-16 w-[40rem] max-w-[90%]'>
                     <Link to={'/dashboard/search-for-hospital'} className="btn-short bg-secondary">Back</Link>
-                    <button className="btn-short bg-secondary">Continue</button>
+                    <Link to={'/dashboard/hostpital-ownership-information'} className="btn-short bg-secondary">Continue</Link>
                 </div>
 
             </div>

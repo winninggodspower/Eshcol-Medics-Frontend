@@ -19,6 +19,7 @@ import LoginExpert from './pages/Login/LoginExpert';
 import RegisterIndividualOrHospital from "./pages/dashboard/Register/ExpertPages/RegisterAsIndividualOrHospital";
 import SearchForHospital from "./pages/dashboard/Register/ExpertPages/SearchForHospital";
 import RegisterHospital from "./pages/dashboard/Register/ExpertPages/RegisterHospital";
+import HostpitalOwnerShipInformation from "./pages/dashboard/Register/ExpertPages/HostpitalOwnerShipInformation";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
         <Route path="register-as-hospital-or-individual" element={<RegisterIndividualOrHospital/>}/>
         <Route path="search-for-hospital" element={<SearchForHospital/>}/>
         <Route path="register-hospital" element={<RegisterHospital/>}/>
+        <Route path="hostpital-ownership-information" element={<HostpitalOwnerShipInformation/>}/>
       </Route>
     </Route>
   )
