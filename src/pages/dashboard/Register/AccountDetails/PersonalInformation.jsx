@@ -72,7 +72,7 @@ function PersonalInformation() {
         </div>
 
         <div className='flex justify-between pb-16 w-[40rem] max-w-[90%]'>
-          <Link to={'/dashboard/hostpital-ownership-information"'} className="btn-short bg-secondary">Back</Link>
+          <Link to={'/dashboard/hostpital-ownership-information'} className="btn-short bg-secondary">Back</Link>
           <Link to={''} className="btn-short bg-secondary">Continue</Link>
         </div>
 
