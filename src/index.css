@@ -24,7 +24,7 @@
       @apply opacity-100;
     }
     .input-hover{
-      @apply outline-none border-2 border-secondary ring-0 border-opacity-50;
+      @apply border-2 border-opacity-50 outline-none border-secondary ring-0;
     }
 
     .custom-input{
@@ -38,6 +38,7 @@
     .register-as-circle{
       @apply rounded-full w-[6.25rem] h-[6.25rem] md:w-[8rem] md:h-[8rem] grid place-items-center;
     }
+
   }
 
 .register-img{
