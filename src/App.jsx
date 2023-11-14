@@ -21,6 +21,8 @@ import SearchForHospital from "./pages/dashboard/Register/ExpertPages/SearchForH
 import RegisterHospital from "./pages/dashboard/Register/ExpertPages/RegisterHospital";
 import HostpitalOwnerShipInformation from "./pages/dashboard/Register/ExpertPages/HostpitalOwnerShipInformation";
 import PersonalInformation from "./pages/dashboard/Register/AccountDetails/PersonalInformation";
+import AccountDetailsLayout from "./layouts/AccountDetailsLayout";
+import PaymentInformation from "./pages/dashboard/Register/AccountDetails/PaymentInformation";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,7 +42,10 @@ const router = createBrowserRouter(
         <Route path="search-for-hospital" element={<SearchForHospital/>}/>
         <Route path="register-hospital" element={<RegisterHospital/>}/>
         <Route path="hostpital-ownership-information" element={<HostpitalOwnerShipInformation/>}/>
-        <Route path="personal-information" element={<PersonalInformation/>}/>
+        <Route element={<AccountDetailsLayout/>}>
+          <Route path="personal-information" element={<PersonalInformation/>}/>
+          <Route path="payment-information" element={<PaymentInformation/>}/>
+        </Route>
       </Route>
     </Route>
   )
