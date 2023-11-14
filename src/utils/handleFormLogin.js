@@ -24,9 +24,10 @@ async function handleFormLogin(data, setError, clearErrors) {
 
 
     } catch (error) {
+        console.log(error);
         setError("notRegisteredInput", {
             type: "custom",
-            message: error.response.data.detail ,
+            message: error?.response?.data?.detail || error.message,
         })
         return false
     }
