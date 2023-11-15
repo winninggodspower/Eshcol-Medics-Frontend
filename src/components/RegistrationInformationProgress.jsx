@@ -38,14 +38,14 @@ function RegistrationInformationProgress({step}) {
           </div>
 
           <div className='flex flex-col items-center gap-[0.6rem] relative'>
-            <div className='flex items-center justify-center  h-[3.125rem] w-[3.125rem] rounded-full bg-grey-4'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <div className={`flex items-center justify-center  h-[3.125rem] w-[3.125rem] rounded-full ${step >= 3 ? 'bg-secondary' : 'bg-grey-4'}`}>
+              <svg className={`${step >= 3 ? 'text-white' : 'text-black'}`} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <g  className={`${step >= 2 ? 'text-white' : 'text-black'}`} clipPath="url(#clip0_88_5346)">
-                  <path d="M5 3.33337H4.16667C3.72464 3.33337 3.30072 3.50897 2.98816 3.82153C2.67559 4.13409 2.5 4.55801 2.5 5.00004V7.91671C2.5 9.13228 2.98289 10.2981 3.84243 11.1576C4.70197 12.0172 5.86776 12.5 7.08333 12.5C8.29891 12.5 9.4647 12.0172 10.3242 11.1576C11.1838 10.2981 11.6667 9.13228 11.6667 7.91671V5.00004C11.6667 4.55801 11.4911 4.13409 11.1785 3.82153C10.866 3.50897 10.442 3.33337 10 3.33337H9.16667" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6.66699 12.5C6.66699 13.1566 6.79632 13.8068 7.04759 14.4134C7.29887 15.02 7.66717 15.5712 8.13146 16.0355C8.59575 16.4998 9.14695 16.8681 9.75357 17.1194C10.3602 17.3707 11.0104 17.5 11.667 17.5C12.3236 17.5 12.9738 17.3707 13.5804 17.1194C14.187 16.8681 14.7382 16.4998 15.2025 16.0355C15.6668 15.5712 16.0351 15.02 16.2864 14.4134C16.5377 13.8068 16.667 13.1566 16.667 12.5V10" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M9.16699 2.5V4.16667" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M5 2.5V4.16667" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16.6667 9.99996C17.5871 9.99996 18.3333 9.25377 18.3333 8.33329C18.3333 7.41282 17.5871 6.66663 16.6667 6.66663C15.7462 6.66663 15 7.41282 15 8.33329C15 9.25377 15.7462 9.99996 16.6667 9.99996Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5 3.33337H4.16667C3.72464 3.33337 3.30072 3.50897 2.98816 3.82153C2.67559 4.13409 2.5 4.55801 2.5 5.00004V7.91671C2.5 9.13228 2.98289 10.2981 3.84243 11.1576C4.70197 12.0172 5.86776 12.5 7.08333 12.5C8.29891 12.5 9.4647 12.0172 10.3242 11.1576C11.1838 10.2981 11.6667 9.13228 11.6667 7.91671V5.00004C11.6667 4.55801 11.4911 4.13409 11.1785 3.82153C10.866 3.50897 10.442 3.33337 10 3.33337H9.16667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.66699 12.5C6.66699 13.1566 6.79632 13.8068 7.04759 14.4134C7.29887 15.02 7.66717 15.5712 8.13146 16.0355C8.59575 16.4998 9.14695 16.8681 9.75357 17.1194C10.3602 17.3707 11.0104 17.5 11.667 17.5C12.3236 17.5 12.9738 17.3707 13.5804 17.1194C14.187 16.8681 14.7382 16.4998 15.2025 16.0355C15.6668 15.5712 16.0351 15.02 16.2864 14.4134C16.5377 13.8068 16.667 13.1566 16.667 12.5V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M9.16699 2.5V4.16667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5 2.5V4.16667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M16.6667 9.99996C17.5871 9.99996 18.3333 9.25377 18.3333 8.33329C18.3333 7.41282 17.5871 6.66663 16.6667 6.66663C15.7462 6.66663 15 7.41282 15 8.33329C15 9.25377 15.7462 9.99996 16.6667 9.99996Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </g>
                 <defs>
                   <clipPath id="clip0_88_5346">

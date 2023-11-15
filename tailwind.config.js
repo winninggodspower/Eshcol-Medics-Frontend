@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 export default {
   content: [
     "./index.html",
@@ -25,6 +27,7 @@ export default {
   },
   plugins: [
     require('flowbite/plugin'),
+    plugin(({addVariant})=>{addVariant('children', '&>*')})
   ],
 }
 

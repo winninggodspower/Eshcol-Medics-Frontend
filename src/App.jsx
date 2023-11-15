@@ -23,6 +23,7 @@ import HostpitalOwnerShipInformation from "./pages/dashboard/Register/ExpertPage
 import PersonalInformation from "./pages/dashboard/Register/AccountDetails/PersonalInformation";
 import AccountDetailsLayout from "./layouts/AccountDetailsLayout";
 import PaymentInformation from "./pages/dashboard/Register/AccountDetails/PaymentInformation";
+import HospitalDetails from "./pages/dashboard/Register/AccountDetails/HospitalDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,6 +46,7 @@ const router = createBrowserRouter(
         <Route element={<AccountDetailsLayout/>}>
           <Route path="personal-information" element={<PersonalInformation/>}/>
           <Route path="payment-information" element={<PaymentInformation/>}/>
+          <Route path="hospital-details" element={<HospitalDetails/>}/>
         </Route>
       </Route>
     </Route>
