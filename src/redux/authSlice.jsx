@@ -1,13 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
+import Cookies from 'js-cookie';
 
 const authSlice = createSlice({
     name: 'auth',
-    initialState: {refreshToken: null, accessToken :null},
+    initialState: {refreshToken: null, accessToken :null, isAuthenticated: false},
     reducers: {
         setCredentails: (state, action)=>{
-            const { user, accessToken } = action.payload;
-            state.refreshToken = user;
+            const { refreshToken, accessToken } = action.payload;
+            state.refreshToken = refreshToken;
             state.accessToken = accessToken;
+            state.isAuthenticated = true;
+
+            console.log(action.payload);
+            Cookies.set('refreshToken', state.refreshToken);
         },
         logOut: (state, action)=>{
             state.refreshToken = null;

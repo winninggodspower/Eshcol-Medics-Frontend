@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 
 const ProtectedRoute = ({ element }) => {
-    const auth = useSelector((state)=> state.auth);
+    const isAuthenticated = useSelector((state)=> state.auth.isAuthenticated);
     const navigate = useNavigate();
 
     const currentLocation = useLocation().pathname;
@@ -12,11 +12,12 @@ const ProtectedRoute = ({ element }) => {
 
 
     useEffect(()=>{
-        if (!auth.accessToken) {
+        console.log(auth);
+        if (!isAuthenticated) {
             navigate('/login');
             setSearchParams({'redirect': currentLocation});
         }
-    }, [auth.accessToken, navigate])
+    }, [isAuthenticated, navigate])
 
     return auth.accessToken ? element : null;
 };

@@ -32,7 +32,7 @@ function LoginExpert() {
                     <form className="form"  onSubmit={handleSubmit(async (data)=>{
                             let response = await handleFormLogin(data, setError, clearErrors);
                             if (response) {
-                                dispatch(setCredentails({refreshToken: response.refresh, accessToken: response.access}));
+                                dispatch(setCredentails({refreshToken: response.refresh, accessToken: response.access, isAuthenticated: true}));
                                 navigate('/dashboard');
                             }
                         })}>
