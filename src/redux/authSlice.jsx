@@ -14,14 +14,18 @@ const authSlice = createSlice({
             console.log(action.payload);
             Cookies.set('refreshToken', state.refreshToken);
         },
-        logOut: (state, action)=>{
+        clearCredentials: (state) => {
             state.refreshToken = null;
             state.accessToken = null;
-        },
+            state.isAuthenticated = false;
+
+            console.log('cleared credentials');
+            Cookies.remove('refreshToken')
+          },
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { setCredentails, logOut } = authSlice.actions
+export const { setCredentails, logOut, clearCredentials } = authSlice.actions
 
 export default authSlice.reducer

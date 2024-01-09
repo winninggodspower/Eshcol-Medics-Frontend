@@ -31,6 +31,7 @@ import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 
 import { useDispatch } from "react-redux";
 import { setCredentails } from "./redux/authSlice";
+import Logout from "./pages/Logout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -56,6 +57,7 @@ const router = createBrowserRouter(
           <Route path="hospital-details" element={<HospitalDetails/>}/>
         </Route>
       </Route>
+      <Route path='/logout' element={<Logout/>} />
     </Route>
   )
 );
@@ -73,9 +75,10 @@ function App() {
         let response = await FetchAccessTokenFromServer(refreshToken);
         if (response) {
           dispatch(setCredentails({refreshToken: refreshToken, accessToken: response.access, isAuthenticated: true}));
-          setcheckedForRefreshToken(true);
         }
       }
+      setcheckedForRefreshToken(true);
+      console.log('this is set');
     }
     if (!checkedForRefreshToken) {
       checkRefreshToken();
@@ -86,7 +89,7 @@ function App() {
   return (
     checkedForRefreshToken ?
     <RouterProvider router={router} /> :
-    <h1>Loading</h1>
+    <h1>Loading </h1>
   )
 }
 
