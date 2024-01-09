@@ -26,7 +26,7 @@ import PaymentInformation from "./pages/dashboard/Register/AccountDetails/Paymen
 import HospitalDetails from "./pages/dashboard/Register/AccountDetails/HospitalDetails";
 
 import Cookies from 'js-cookie';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 
 import { useDispatch } from "react-redux";
@@ -62,27 +62,31 @@ const router = createBrowserRouter(
 
 function App() {
   const dispatch = useDispatch();
+  let [ checkedForRefreshToken, setcheckedForRefreshToken ] = useState(false);
 
   useEffect(()=>{
     // this function is responsible for checking if there is a refresh token in cookies,
     // then fetching the access token and storing it in the global state.
     async function checkRefreshToken() {
       const refreshToken = Cookies.get('refreshToken');
-      console.log(refreshToken);
       if (refreshToken) {
         let response = await FetchAccessTokenFromServer(refreshToken);
-        console.log(response);
         if (response) {
-          console.log('setting credentials');
           dispatch(setCredentails({refreshToken: refreshToken, accessToken: response.access, isAuthenticated: true}));
+          setcheckedForRefreshToken(true);
         }
       }
     }
-    checkRefreshToken();
-  })
+    if (!checkedForRefreshToken) {
+      checkRefreshToken();
+    }
+
+  }, [dispatch])
 
   return (
-    <RouterProvider router={router} />
+    checkedForRefreshToken ?
+    <RouterProvider router={router} /> :
+    <h1>Loading</h1>
   )
 }
 

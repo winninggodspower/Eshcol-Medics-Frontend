@@ -1,7 +1,7 @@
 // ProtectedRoute.js
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
+import { useNavigate, useLocation, useSearchParams, Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ element }) => {
     const isAuthenticated = useSelector((state)=> state.auth.isAuthenticated);
@@ -10,16 +10,14 @@ const ProtectedRoute = ({ element }) => {
     const currentLocation = useLocation().pathname;
     let [searchParams, setSearchParams] = useSearchParams();
 
-
     useEffect(()=>{
-        console.log(auth);
         if (!isAuthenticated) {
             navigate('/login');
             setSearchParams({'redirect': currentLocation});
         }
-    }, [isAuthenticated, navigate])
+    }, [isAuthenticated])
 
-    return auth.accessToken ? element : null;
+    return isAuthenticated ? element : null;
 };
 
 export default ProtectedRoute;
