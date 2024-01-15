@@ -12,7 +12,7 @@ const authSlice = createSlice({
             state.isAuthenticated = true;
 
             console.log(action.payload);
-            Cookies.set('refreshToken', state.refreshToken);
+            Cookies.set('refreshToken', refreshToken);
         },
         clearCredentials: (state) => {
             state.refreshToken = null;

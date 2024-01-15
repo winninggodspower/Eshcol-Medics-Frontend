@@ -11,10 +11,10 @@ const Logout = () => {
 
   useEffect(() => {
     console.log('logout useEffect running');
-    // Dispatch an action to clear authentication state (e.g., remove tokens)
+    // Dispatch an action to clear authentication state
     dispatch(clearCredentials());
 
-    // Redirect to the login page or any other desired location
+    // Redirect to home page
     navigate('/');
   }, [dispatch, navigate]);
 

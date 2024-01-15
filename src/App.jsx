@@ -30,7 +30,7 @@ import { useEffect, useState } from "react";
 import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 
 import { useDispatch } from "react-redux";
-import { setCredentails } from "./redux/authSlice";
+import { clearCredentials, setCredentails } from "./redux/authSlice";
 import Logout from "./pages/Logout";
 
 const router = createBrowserRouter(
@@ -73,12 +73,13 @@ function App() {
       const refreshToken = Cookies.get('refreshToken');
       if (refreshToken) {
         let response = await FetchAccessTokenFromServer(refreshToken);
+        console.log(response);
         if (response) {
-          dispatch(setCredentails({refreshToken: refreshToken, accessToken: response.access, isAuthenticated: true}));
+          dispatch(setCredentails({refreshToken: response.refresh, accessToken: response.access, isAuthenticated: true}));
         }
+
       }
       setcheckedForRefreshToken(true);
-      console.log('this is set');
     }
     if (!checkedForRefreshToken) {
       checkRefreshToken();
