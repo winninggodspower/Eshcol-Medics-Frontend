@@ -51,6 +51,7 @@ const router = createBrowserRouter(
         <Route path="search-for-hospital" element={<SearchForHospital/>}/>
         <Route path="register-hospital" element={<RegisterHospital/>}/>
         <Route path="hostpital-ownership-information" element={<HostpitalOwnerShipInformation/>}/>
+        
         <Route element={<AccountDetailsLayout/>}>
           <Route path="personal-information" element={<PersonalInformation/>}/>
           <Route path="payment-information" element={<PaymentInformation/>}/>

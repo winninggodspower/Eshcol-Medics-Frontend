@@ -1,4 +1,4 @@
-import RegistrationInformationProgress from "../../../../components/RegistrationInformationProgress";
+import RegistrationInformationProgress from "../../../../components/RegistrationInformationProgress/RegistrationInformationProgress";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 function PaymentInformation() {

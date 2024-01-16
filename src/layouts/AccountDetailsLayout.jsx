@@ -1,5 +1,5 @@
 import { Outlet, Link } from 'react-router-dom'
-import RegistrationInformationProgress from '../components/RegistrationInformationProgress'
+import RegistrationInformationProgress from '../components/RegistrationInformationProgress/RegistrationInformationProgress'
 
 export default function AccountDetailsLayout() {
   return (
