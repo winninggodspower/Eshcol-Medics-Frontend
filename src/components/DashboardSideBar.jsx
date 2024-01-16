@@ -1,6 +1,6 @@
 import profileAvater from "../assets/profile-avatar.svg"
 import blurredAvater from "../assets/blurred-avatar.png"
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function DashboardSideBar() {
   return (
@@ -9,7 +9,7 @@ function DashboardSideBar() {
             <img src={profileAvater} style={{width: "4.625rem"}} />
             <div className="">
                 <p className="text-lg leading-none">Username</p>
-                <span className="text-sm font-light leading-none text-secondary ">Sign out</span>
+                <span className="text-sm font-light leading-none text-secondary"> <Link to={'/logout'}> Sign out </Link></span>
             </div>
         </div>
 
