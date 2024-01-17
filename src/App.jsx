@@ -20,10 +20,10 @@ import RegisterIndividualOrHospital from "./pages/dashboard/Register/ExpertPages
 import SearchForHospital from "./pages/dashboard/Register/ExpertPages/SearchForHospital";
 import RegisterHospital from "./pages/dashboard/Register/ExpertPages/RegisterHospital";
 import HostpitalOwnerShipInformation from "./pages/dashboard/Register/ExpertPages/HostpitalOwnerShipInformation";
-import PersonalInformation from "./pages/dashboard/Register/AccountDetails/PersonalInformation";
-import AccountDetailsLayout from "./layouts/AccountDetailsLayout";
-import PaymentInformation from "./pages/dashboard/Register/AccountDetails/PaymentInformation";
-import HospitalDetails from "./pages/dashboard/Register/AccountDetails/HospitalDetails";
+import PersonalInformation from "./pages/dashboard/Register/RegistrationDetails/PersonalInformation";
+import RegistrationDetailsLayout from "./layouts/RegistrationDetailsLayout";
+import PaymentInformation from "./pages/dashboard/Register/RegistrationDetails/PaymentInformation";
+import HospitalDetails from "./pages/dashboard/Register/RegistrationDetails/HospitalDetails";
 
 import Cookies from 'js-cookie';
 import { useEffect, useState } from "react";
@@ -32,6 +32,7 @@ import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
 import Logout from "./pages/Logout";
+import Registration from "./pages/dashboard/Register/Registration";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -47,12 +48,13 @@ const router = createBrowserRouter(
         <Route path='expert' element={<LoginExpert/>} />
       </Route>
       <Route path="/dashboard" element={<ProtectedRoute element={<DashboardLayout/>} />}>
+        <Route path="registration" element={<Registration/>}></Route>
         <Route path="register-as-hospital-or-individual" element={<RegisterIndividualOrHospital/>}/>
         <Route path="search-for-hospital" element={<SearchForHospital/>}/>
         <Route path="register-hospital" element={<RegisterHospital/>}/>
         <Route path="hostpital-ownership-information" element={<HostpitalOwnerShipInformation/>}/>
         
-        <Route element={<AccountDetailsLayout/>}>
+        <Route element={<RegistrationDetailsLayout/>}>
           <Route path="personal-information" element={<PersonalInformation/>}/>
           <Route path="payment-information" element={<PaymentInformation/>}/>
           <Route path="hospital-details" element={<HospitalDetails/>}/>

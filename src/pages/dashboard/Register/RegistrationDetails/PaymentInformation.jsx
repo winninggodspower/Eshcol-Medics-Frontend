@@ -1,4 +1,4 @@
-import RegistrationInformationProgress from "../../../../components/RegistrationInformationProgress/RegistrationInformationProgress";
+import ExpertRegistrationProgress from "../../../../components/RegistrationInformationProgress/ExpertRegistrationProgress";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 function PaymentInformation() {
@@ -9,7 +9,7 @@ function PaymentInformation() {
   return (
     <>
       <div className="flex-grow w-[33rem] max-w-[90%]">
-        <RegistrationInformationProgress step={2} />
+        <ExpertRegistrationProgress step={2} />
 
         <form action="" className="form ">
 

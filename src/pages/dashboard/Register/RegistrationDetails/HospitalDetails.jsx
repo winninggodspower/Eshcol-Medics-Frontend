@@ -1,4 +1,4 @@
-import RegistrationInformationProgress from "../../../../components/RegistrationInformationProgress/RegistrationInformationProgress";
+import ExpertRegistrationProgress from "../../../../components/RegistrationInformationProgress/ExpertRegistrationProgress";
 import hospitalImage from "../../../../assets/hospital_image.png";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ function HospitalDetails() {
   return (
     <>
       <div className="flex-grow w-[33rem] max-w-[90%]">
-        <RegistrationInformationProgress step={3} />
+        <ExpertRegistrationProgress step={3} />
 
         <form action="" className="form ">
 
