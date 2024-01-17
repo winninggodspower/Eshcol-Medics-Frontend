@@ -1,8 +1,13 @@
 import profileAvater from "../assets/profile-avatar.svg"
 import blurredAvater from "../assets/blurred-avatar.png"
 import { NavLink, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 function DashboardSideBar() {
+  
+  const userInformation = useSelector((state)=> state.auth.userInformation);
+
   return (
     <aside className='w-full md:w-[30%] sm:w-2/6 md:min-w-fit md:min-h-[calc(100vh-4.65rem)] font-inter border-e-4 fixed -translate-x-full md:static md:translate-x-0 overflow-x-hidden'>
         <div className="flex items-center gap-5 py-6 ps-12">
@@ -26,7 +31,7 @@ function DashboardSideBar() {
                 </clipPath>
               </defs>
             </svg>
-            <p className="text-base leading-none">Patient hitory</p>
+            <p className="text-base leading-none">{ userInformation.user_type == 'patient' ? 'Medical history' : 'Patient history' }</p>
           </div>
 
           <div className="flex justify-center items-center md:justify-start md:ps-[6.8rem] gap-1">
