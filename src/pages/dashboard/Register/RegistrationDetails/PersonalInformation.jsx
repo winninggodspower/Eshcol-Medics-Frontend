@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 
-function PersonalInformation() {
+function PersonalInformation({ handleNext }) {
 
   const {register, handleSubmit, setError, clearErrors,
     formState: {errors, isSubmitting}} = useForm();
@@ -72,7 +72,7 @@ function PersonalInformation() {
 
       <div className='flex justify-between pb-16 w-[40rem] max-w-[90%]'>
         <Link to={'/dashboard/hostpital-ownership-information'} className="btn-short bg-secondary">Back</Link>
-        <Link to={'/dashboard/payment-information'} className="btn-short bg-secondary">Continue</Link>
+        <button onClick={handleNext} className="btn-short bg-secondary">Continue</button>
       </div>
     </>
   )

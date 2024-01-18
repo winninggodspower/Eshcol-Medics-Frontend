@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-function HospitalDetails() {
+function HospitalDetails({ handleNext, handlePrev }) {
 
   const {register, handleSubmit, setError, clearErrors, watch, 
     formState: {errors, isSubmitting}} = useForm({
@@ -51,8 +51,8 @@ function HospitalDetails() {
       </div>
 
       <div className='flex justify-between pb-16 w-[40rem] max-w-[90%]'>
-        <Link to={'/dashboard/payment-information'} className="btn-short bg-secondary">Back</Link>
-        <Link to={''} className="btn-short bg-secondary">Continue</Link>
+        <button onClick={handlePrev} className="btn-short bg-secondary">Back</button>
+        <button onClick={handleNext} className="btn-short bg-secondary">Continue</button>
       </div>
     </>
   )
