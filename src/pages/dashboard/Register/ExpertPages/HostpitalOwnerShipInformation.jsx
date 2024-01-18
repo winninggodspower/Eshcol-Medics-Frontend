@@ -68,7 +68,7 @@ function HostpitalOwnerShipInformation() {
 
                 <div className='flex justify-between pb-16 w-[40rem] max-w-[90%]'>
                     <Link to={'/dashboard/register-hospital'} className="btn-short bg-secondary">Back</Link>
-                    <Link to={'/dashboard/personal-information'} className="btn-short bg-secondary">Continue</Link>
+                    <Link to={'/dashboard/registration'} className="btn-short bg-secondary">Continue</Link>
                 </div>
 
             </div>

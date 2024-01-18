@@ -1,13 +1,18 @@
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, redirect, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import PersonalInformation from '../RegistrationDetails/PersonalInformation';
 import PaymentInformation from '../RegistrationDetails/PaymentInformation';
 import HospitalDetails from '../RegistrationDetails/HospitalDetails';
 
 export default function ExpertRegistration() {
+  let navigate = useNavigate();
   const [step, setStep] = useState(1);
 
   const handleNext = () => {
+    if (step == 3) {
+      console.log('steps completed');
+      return navigate('/dashboard/review-in-progress')
+    }
     setStep((prevStep) => prevStep + 1);
   };
 
