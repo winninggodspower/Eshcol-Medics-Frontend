@@ -1,8 +1,8 @@
 import { Outlet, Link, redirect, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
-import PersonalInformation from '../RegistrationDetails/PersonalInformation';
-import PaymentInformation from '../RegistrationDetails/PaymentInformation';
-import HospitalDetails from '../RegistrationDetails/HospitalDetails';
+import PersonalInformation from './PersonalInformation';
+import PaymentInformation from './PaymentInformation';
+import HospitalDetails from './HospitalDetails';
 
 export default function ExpertRegistration() {
   let navigate = useNavigate();

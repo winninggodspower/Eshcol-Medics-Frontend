@@ -1,14 +1,14 @@
 import React from 'react'
 
-function PatientRegistrationInformationProgress({ step }) {
+function PatientRegistrationProgress({ step }) {
 
     let pageText = ['Personal Information', 'Billing Information', 'Hospital details', 'Next of kin'][step - 1];
 
     return (
         <>
-            <h3 className="pb-5 md:text-2xl text-xl font-bold leading-none text-center font-railway ">Give us more information</h3>
+            <h3 className="pb-5 text-xl font-bold leading-none text-center md:text-2xl font-railway ">Give us more information</h3>
 
-            <div className='mt-14 mb-12 font-railway hidden md:block'>
+            <div className='hidden mb-12 mt-14 font-railway md:block'>
 
                 <div className="relative flex justify-between max-w-96">
 
@@ -119,10 +119,10 @@ function PatientRegistrationInformationProgress({ step }) {
                         </svg>
                     )}
                 </div>
-                <p className='text-base md:text-2xl font-semibold md:font-bold text-center '>{pageText}</p>
+                <p className='text-base font-semibold text-center md:text-2xl md:font-bold '>{pageText}</p>
             </div>
         </>
     )
 }
 
-export default PatientRegistrationInformationProgress;
+export default PatientRegistrationProgress;

@@ -66,6 +66,7 @@ function App() {
     // then fetching the access token and storing it in the global state.
     async function checkRefreshToken() {
       const refreshToken = Cookies.get('refreshToken');
+      console.log('found refresh token');
       if (refreshToken) {
         let response = await FetchAccessTokenFromServer(refreshToken);
         console.log(response);
