@@ -1,6 +1,8 @@
 import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react';
 import PersonalInformation from './PersonalInformation';
+import BillingInformation from './BillingInformation';
+import HositalDetails from './HospitalDetails';
 
 export default function PatientRegistration() {
 
@@ -22,13 +24,13 @@ export default function PatientRegistration() {
           <PersonalInformation handleNext={handleNext} />
         )}
 
-        {/* {step === 2 && (
-          <PaymentInformation handleNext={handleNext} handlePrev={handlePrev} />
+        {step === 2 && (
+          <BillingInformation handleNext={handleNext} handlePrev={handlePrev} />
         )}
 
         {step === 3 && (
-          <HospitalDetails handleNext={handleNext} handlePrev={handlePrev} />
-        )} */}
+          <HositalDetails handleNext={handleNext} handlePrev={handlePrev} />
+        )}
 
       </div>
     </section>
