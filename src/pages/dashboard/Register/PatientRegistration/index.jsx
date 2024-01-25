@@ -1,8 +1,8 @@
-import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react';
 import PersonalInformation from './PersonalInformation';
 import BillingInformation from './BillingInformation';
 import HositalDetails from './HospitalDetails';
+import NextOfKin from './NextOfKin';
 
 export default function PatientRegistration() {
 
@@ -30,6 +30,10 @@ export default function PatientRegistration() {
 
         {step === 3 && (
           <HositalDetails handleNext={handleNext} handlePrev={handlePrev} />
+        )}
+
+        {step === 4 && (
+          <NextOfKin handleNext={handleNext} handlePrev={handlePrev} />
         )}
 
       </div>
