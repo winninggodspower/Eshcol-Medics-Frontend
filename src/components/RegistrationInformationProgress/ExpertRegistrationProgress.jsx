@@ -58,6 +58,7 @@ function RegistrationInformationProgress({step}) {
             <div className="absolute w-1/2 h-full bg-white end-0 -z-10" />
           </div>
 
+          {/* straight horizontal lines */}
           <div className="absolute grid w-full grid-cols-2 translate-y-1/2 h-[3.125rem] -z-20">
             <div id="progress1" className={`w-full h-[0.3125rem] bg-grey-4 ${step > 1 && "bg-secondary"}`}></div>
             <div id="progress2" className={`w-full h-[0.3125rem] bg-grey-4 ${step > 2 && "bg-secondary"}`}></div>
