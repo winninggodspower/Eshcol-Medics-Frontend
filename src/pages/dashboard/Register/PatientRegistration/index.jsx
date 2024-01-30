@@ -1,14 +1,19 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import PersonalInformation from './PersonalInformation';
 import BillingInformation from './BillingInformation';
 import HositalDetails from './HospitalDetails';
 import NextOfKin from './NextOfKin';
 
 export default function PatientRegistration() {
-
+  let navigate = useNavigate();
   const [step, setStep] = useState(1);
 
   const handleNext = () => {
+    if (step == 4) {
+      console.log('steps completed');
+      return navigate('/dashboard/services')
+    }
     setStep((prevStep) => prevStep + 1);
   };
 

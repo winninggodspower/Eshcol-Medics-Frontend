@@ -30,6 +30,7 @@ import { clearCredentials, setCredentails } from "./redux/authSlice";
 import Logout from "./pages/Logout";
 import Registration from "./pages/dashboard/Register/Registration";
 import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/ReviewInProgress";
+import PatientServices from "./pages/dashboard/Services";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
         <Route path="register-hospital" element={<RegisterHospital/>}/>
         <Route path="hostpital-ownership-information" element={<HostpitalOwnerShipInformation/>}/>
         <Route path="review-in-progress" element={<ReviewInProgress/>} />
+        <Route path="services" element={<PatientServices/>}/>
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>

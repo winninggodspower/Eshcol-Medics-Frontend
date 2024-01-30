@@ -1,4 +1,4 @@
-import { Outlet, Link, redirect, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import PersonalInformation from './PersonalInformation';
 import PaymentInformation from './PaymentInformation';
