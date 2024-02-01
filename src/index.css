@@ -20,6 +20,10 @@
       @apply btn md:text-base text-[0.875rem] py-3 px-6 font-medium rounded-md leading-none;
     }
 
+    .service-btn{
+      @apply bg-white text-black rounded-md py-2 px-9 font-semibold text-xs;
+    }
+
     nav ul li a.active{
       @apply opacity-100;
     }
