@@ -14,7 +14,7 @@ function DashboardSideBar() {
   const userInformation = useSelector((state) => state.auth.userInformation);
 
   return (
-    <aside className='w-full md:w-[30%] sm:w-2/6 md:min-w-fit md:min-h-[calc(100vh-4.65rem)] font-inter border-e-4 fixed -translate-x-full md:static md:translate-x-0 overflow-x-hidden bg-white transition-transform duration-500 md:duration-0' >
+    <aside className='w-full md:w-[30%] sm:w-2/6 md:min-w-fit md:min-h-[calc(100vh-4.65rem)] font-inter border-e-4 fixed -translate-x-full md:static md:translate-x-0 overflow-x-hidden bg-white transition-transform duration-500 md:duration-0 z-10'>
       
       <div className="md:hidden absolute top-0 right-0 mt-3 mr-5 cursor-pointer" onClick={closeSideBar}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

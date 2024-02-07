@@ -80,7 +80,7 @@ function PatientRegistrationProgress({ step }) {
                 </div>
             </div>
 
-            <div className='flex flex-col items-center gap-[0.3rem] relative mb-14 font-railway'>
+            <div className='flex flex-col items-center gap-[0.3rem] relative mb-14 font-railway z-0'>
                 <div className='flex items-center justify-center h-[3.125rem] w-[3.125rem] rounded-full bg-secondary md:hidden'>
                     {step == 1 && (
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
