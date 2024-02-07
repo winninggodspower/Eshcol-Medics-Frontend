@@ -31,6 +31,7 @@ import Logout from "./pages/Logout";
 import Registration from "./pages/dashboard/Register/Registration";
 import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/ReviewInProgress";
 import PatientServices from "./pages/dashboard/Services";
+import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -53,6 +54,7 @@ const router = createBrowserRouter(
         <Route path="hostpital-ownership-information" element={<HostpitalOwnerShipInformation/>}/>
         <Route path="review-in-progress" element={<ReviewInProgress/>} />
         <Route path="services" element={<PatientServices/>}/>
+        <Route path="consult-doctor" element={<ConsultDoctor/>} />
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>

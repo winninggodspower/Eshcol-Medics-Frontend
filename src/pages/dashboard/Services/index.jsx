@@ -1,5 +1,3 @@
-import React from 'react'
-
 // services images
 import doctorImage from "../../../assets/services-image/doctor.png"
 import ambulanceImage from "../../../assets/services-image/ambulance.png"
@@ -7,6 +5,7 @@ import nurseImage from "../../../assets/services-image/nurse.png"
 import billHistoryImage from "../../../assets/services-image/bill-history.png"
 import consultationImage from "../../../assets/services-image/consultation.png"
 import expertHistoryImage from "../../../assets/services-image/expert-history.png"
+import { Link } from "react-router-dom"
 
 function PatientServices() {
     return (
@@ -40,7 +39,7 @@ function PatientServices() {
                         <div className='text-center justify-self-center'>
                             <img className='mx-auto bg-white rounded-full' src={billHistoryImage} alt="" />
                             <p className='my-4 text-sm font-medium'>consult a doctor</p>
-                            <button className='service-btn'>consult now</button>
+                            <Link to={'/dashboard/consult-doctor'} className='service-btn'>consult now</Link>
                         </div>
 
                         <div className='text-center justify-self-center'>
