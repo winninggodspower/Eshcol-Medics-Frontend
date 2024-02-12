@@ -27,7 +27,11 @@ function RegisterExpert() {
                     <p className="font-normal text-center text-base md:text-lg opacity-90 font-raleway">gain access to patients from all over Africa</p>
 
                     <form className="form" onSubmit={handleSubmit(async (data)=>{
-                            await handleFormRegister(data, setError, true);
+                            let response = await handleFormRegister(data, setError, true);
+                            if (response) {
+                                console.log('redirecting to dashboard');
+                                return redirect('/login');
+                            }
                     })}>
                         <input className="w-full rounded-md custom-input h-11 bg-grey-2 " type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                         <p className="w-full text-start text-red-600" >{errors.email?.message}</p>
