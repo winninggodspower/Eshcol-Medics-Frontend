@@ -1,4 +1,5 @@
 import React from 'react'
+import profileAvatar from "../../../../assets/avatar.png"
 
 function UserProfile() {
   return (
