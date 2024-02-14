@@ -20,6 +20,10 @@
       @apply btn md:text-base text-[0.875rem] py-3 px-6 font-medium rounded-md leading-none;
     }
 
+    .btn-dashboard{
+      @apply btn py-[10px] ps-6 leading-7 items-center w-[300px] max-w-[95%] mx-auto whitespace-nowrap flex gap-2 lg:gap-4 pe-0 rounded-3xl ;
+    }
+
     .service-btn{
       @apply bg-white text-black rounded-md py-2 px-9 font-semibold text-xs;
     }

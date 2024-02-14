@@ -12,6 +12,7 @@ export default {
       colors: {
         'secondary': '#352E43',
         'main': '#055C9F',
+        'tertiary': '#394FE1',
         'Green': '#079E16',
         'Green-2': '#567867',
         'Green-3': '#0CF607',
