@@ -1,5 +1,6 @@
 import React from 'react'
 import profileAvatar from "../../../../assets/avatar.png"
+import ChatBubble from '../../../../components/ChatBubble'
 
 function SessionChat() {
   return (
@@ -10,7 +11,7 @@ function SessionChat() {
         <div className='flex items-center py-3 sm:py-5 ps-6 sm:ps-10 gap-2 sm:gap-4 '>
           <div className='relative'>
             <img className='rounded-full w-[35px] sm:w-[50px]' src={profileAvatar} alt="" />
-            <span class="bottom-0 right-0 absolute  w-4 h-4 bg-Green-3 rounded-full"></span>
+            <span className="bottom-0 right-0 absolute  w-4 h-4 bg-Green-3 rounded-full"></span>
           </div>
           <h4 className='font-inter font-semibold text-sm sm:text-lg'> Dr Zerebyakov Elivish</h4>
         </div>
@@ -19,13 +20,8 @@ function SessionChat() {
         <p className="text-center my-7 md:mt-8 md:mb-14 font-inter text-xs md:text-sm text-[#9CA6AE]">Dr Zerebyakov is typing....</p>
 
         <div className='w-[85%] md:w-[90%] mx-auto font-inter'>
-          <div className='w-9/12 sm:w-7/12 bg-[#D9D9D9] text-[#5D6066] text-xs md:text-base p-5 shadow-[0px_4px_120px_rgba(58,86,78,0.15)] mb-7 sm:mb-12 rounded-e-3xl rounded-ss-3xl'>
-            Good day,how can i help you?
-          </div>
-
-          <div className='w-9/12 sm:w-7/12 bg-[#394FE1] text-white text-xs md:text-base p-5 shadow-[0px_4px_120px_rgba(58,86,78,0.15)] float-right mb-7 sm:mb-12 rounded-s-3xl rounded-se-3xl' >
-            I’m having blisters on my eyes
-          </div>
+          <ChatBubble sender={false} message={'Good day,how can i help you?'}/>
+          <ChatBubble sender={true} message={'I’m having blisters on my eyes'}/>
         </div>
 
         <div className='w-full absolute bottom-0 h-18 self-center bg-red-300'>
@@ -74,32 +70,32 @@ function SessionChat() {
         <div className='mt-6 grid gap-y-5 justify-center'>
           <button className='btn flex gap-4 rounded-3xl bg-[#FFD700]'>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             View medical certificate
           </button>
           <button className='btn flex gap-4 rounded-3xl bg-[#394FE1]'>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M5.83301 8.3335L9.99967 12.5002L14.1663 8.3335" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M10 12.5V2.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M5.83301 8.3335L9.99967 12.5002L14.1663 8.3335" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M10 12.5V2.5" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
 
             View medical certificate
           </button>
           <button className='btn flex gap-4 rounded-3xl bg-[#352E43]'>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 6L6 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M6 6L18 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M18 6L6 18" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M6 6L18 18" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
 
             View medical certificate
           </button>
           <button className='btn flex gap-4 rounded-3xl bg-[#FC3D39]'>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.33301 12.4998C3.33301 12.4998 4.16634 11.6665 6.66634 11.6665C9.16634 11.6665 10.833 13.3332 13.333 13.3332C15.833 13.3332 16.6663 12.4998 16.6663 12.4998V2.49984C16.6663 2.49984 15.833 3.33317 13.333 3.33317C10.833 3.33317 9.16634 1.6665 6.66634 1.6665C4.16634 1.6665 3.33301 2.49984 3.33301 2.49984V12.4998Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M3.33301 18.3333V12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M3.33301 12.4998C3.33301 12.4998 4.16634 11.6665 6.66634 11.6665C9.16634 11.6665 10.833 13.3332 13.333 13.3332C15.833 13.3332 16.6663 12.4998 16.6663 12.4998V2.49984C16.6663 2.49984 15.833 3.33317 13.333 3.33317C10.833 3.33317 9.16634 1.6665 6.66634 1.6665C4.16634 1.6665 3.33301 2.49984 3.33301 2.49984V12.4998Z" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M3.33301 18.3333V12.5" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
 
             View medical certificate
