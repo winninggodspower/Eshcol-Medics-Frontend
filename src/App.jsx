@@ -32,6 +32,7 @@ import Registration from "./pages/dashboard/Register/Registration";
 import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/ReviewInProgress";
 import PatientServices from "./pages/dashboard/Services";
 import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
+import HowTo from "./pages/dashboard/HowTo";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +56,7 @@ const router = createBrowserRouter(
         <Route path="review-in-progress" element={<ReviewInProgress/>} />
         <Route path="services" element={<PatientServices/>}/>
         <Route path="consult-doctor" element={<ConsultDoctor/>} />
+        <Route path="how-to-use" element={<HowTo/>} />
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>

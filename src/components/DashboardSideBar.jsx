@@ -16,7 +16,7 @@ function DashboardSideBar() {
   return (
     <aside className='w-full md:w-[30%] sm:w-2/6 md:min-w-fit md:min-h-[calc(100vh-4.65rem)] font-inter border-e-4 fixed -translate-x-full md:static md:translate-x-0 overflow-x-hidden bg-white transition-transform duration-500 md:duration-0 z-10'>
       
-      <div className="md:hidden absolute top-0 right-0 mt-3 mr-5 cursor-pointer" onClick={closeSideBar}>
+      <div className="absolute top-0 right-0 mt-3 mr-5 cursor-pointer md:hidden" onClick={closeSideBar}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 6L6 18" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M6 6L18 18" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
@@ -55,29 +55,29 @@ function DashboardSideBar() {
 
 
       <div className="border-t-2">
-        <NavLink className="flex gap-5 py-6 text-white border-b-4 ps-20 bg-secondary">
+        <NavLink to={'/dashboard/consult-doctor'} className={({ isActive }) => "flex gap-5 border-b-2 py-7 ps-20 " + (isActive && "text-white bg-secondary") } >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M9 22V12H15V22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <p className="text-base leading-none">Home</p>
         </NavLink>
-        <NavLink className="flex gap-5 border-b-2 py-7 ps-20">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M12 16V12" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M12 8H12.01" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <NavLink to={'/dashboard/how-to-use'} className={({ isActive }) => "flex gap-5 border-b-2 py-7 ps-20 " + (isActive && "text-white bg-secondary") }>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M12 16V12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M12 8H12.01" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <p className="text-base leading-none">How to use?</p>
         </NavLink>
-        <NavLink className="flex gap-5 border-b-2 py-7 ps-20">
+        <NavLink to={'/dashboard/prescription'} className={({ isActive }) => "flex gap-5 border-b-2 py-7 ps-20 " + (isActive && "text-white bg-secondary") }>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M15 9H9V15H15V9Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <p className="text-base leading-none">Prescribe</p>
         </NavLink>
-        <NavLink className="flex gap-5 border-b-2 py-7 ps-20">
+        <NavLink to={'/dashboard/settings'} className={({ isActive }) => "flex gap-5 border-b-2 py-7 ps-20 " + (isActive && "text-white bg-secondary") }>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
             <g clipPath="url(#clip0_835_1860)">
               <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
