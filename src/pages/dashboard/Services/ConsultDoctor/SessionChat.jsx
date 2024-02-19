@@ -49,7 +49,7 @@ function SessionChat() {
               </svg>
             </button>
             <div className="absolute top-0 md:end-0 w-full ps-16 md:ps-0 md:w-[calc(100%-5.5rem)] h-full flex gap-[5%] md:gap-[4%] text-white font-inter overflow-x-hidden">
-              <div className='flex items-center gap-2 md:gap-3 text-[10px] md:text-base'>
+              <label className='flex items-center gap-2 md:gap-3 text-[10px] md:text-base'>
                 <svg className='w-6 h-6 md:w-10 md:h-10' viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="40" height="40" rx="20" fill="#055C9F" />
                   <path d="M26.2049 12.0215H13.7936C12.8143 12.0215 12.0205 12.8153 12.0205 13.7945V26.2059C12.0205 27.1851 12.8143 27.9789 13.7936 27.9789H26.2049C27.1841 27.9789 27.978 27.1851 27.978 26.2059V13.7945C27.978 12.8153 27.1841 12.0215 26.2049 12.0215Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -57,7 +57,8 @@ function SessionChat() {
                   <path d="M27.9783 22.6597L23.5457 18.2271L13.7939 27.9788" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 Upload media
-              </div>
+                <input className='hidden' type="file" />
+              </label>
               <div className="flex items-center gap-2 md:gap-3 text-[10px] md:text-base">
                 <svg className='w-6 h-6 md:w-10 md:h-10' viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="40" height="40" rx="20" fill="#352E43" />
