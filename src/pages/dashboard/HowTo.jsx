@@ -4,11 +4,11 @@ function HowTo() {
     return (
         <div className='flex h-full grow'>
 
-            <div className='h-full grow md:border-e-4'>
+            <div className='h-full bg-white grow md:border-e-4'>
                 <div className='flex items-center gap-2 border-b ps-3 py-[15px] md:py-9 md:ps-14 border-[rgba(0,0,0,0.23)]'>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 12H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12 19L5 12L12 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M19 12H5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M12 19L5 12L12 5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <h2 className="text-lg font-bold md:text-xl font-railway">How To Use?</h2>
                 </div>
@@ -42,18 +42,18 @@ function HowTo() {
                 </div>
             </div>
 
-            <div className='hidden md:block w-[44%] border-e-4 text-center'>
-                <h2>Have any questions ?</h2>
-                <h3>Communicate with customer service</h3>
+            <div className='hidden md:block w-[44%] min-w-fit border-e-4 text-center pt-[66px] px-8 lg:px-16 font-inter bg-white h-full '>
+                <h2 className="text-lg font-semibold md:text-xl ">Have any questions ?</h2>
+                <h3 className="mt-1 text-xl font-medium">Communicate with customer service</h3>
 
-                <img src={customerServiceImage} alt="" />
-                <p>Tayo, Olu and David are online to reply you</p>
+                <img className="my-[55px]" src={customerServiceImage} alt="" />
+                <p className="font-medium">Tayo, Olu and David are online to reply you</p>
 
-                <button>
+                <button className="btn mt-[55px] mb-[110px] flex bg-secondary rounded-md text-md py-4 px-7 gap-[10px] mx-auto">
                     Talk to customer service
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
 
                 </button>
