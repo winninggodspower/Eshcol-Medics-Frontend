@@ -9,10 +9,10 @@ function ConsultDoctor() {
     }, 5000)
 
     return (
-        <div className='grow'>
+        <div className='bg-white grow'>
             { !isDoneSearching ?
                 <div className='w-11/12 max-w-[45rem] mx-auto px-[6px] font-inter'>
-                    <div className="mx-auto text-center py-12 md:pt-16 ">
+                    <div className="py-12 mx-auto text-center md:pt-16 ">
                         <svg className="mx-auto w-[150px] h-[150px] md:w-[250px] md:h-[250px]" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="150" cy="150" r="150" fill="#BBC1F5" fillOpacity="0.6" />
                             <circle opacity="0.8" cx="150" cy="150" r="120" fill="#BBC1F5" fillOpacity="0.6" />
@@ -24,8 +24,8 @@ function ConsultDoctor() {
                         <p className="mt-5 text-sm md:text-lg">Searching for available doctors...</p>
                     </div>
 
-                    <div className="border border-grey-6 p-4 md:py-4 md:px-12 mb-7">
-                        <h3 className="font-railway text font-semibold md:text-xl">Did you know?</h3>
+                    <div className="p-4 border border-grey-6 md:py-4 md:px-12 mb-7">
+                        <h3 className="font-semibold font-railway text md:text-xl">Did you know?</h3>
                         <p className="text-base md:mt-2">You can book appointments with our doctor’s at their hospitals</p>
                     </div>
 

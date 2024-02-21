@@ -12,7 +12,7 @@ function DashboardLayout() {
   }
 
   return (
-    <div className="flex border-t-4 relative">
+    <div className="flex border-t-4 relative bg-[#E5E7EB]">
       <DashboardSideBar />
       <Outlet />
       {!excludeUrl.includes(location.pathname) &&
