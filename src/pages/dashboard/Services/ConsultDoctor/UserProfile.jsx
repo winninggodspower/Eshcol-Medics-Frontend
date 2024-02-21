@@ -4,7 +4,7 @@ import profileAvatar from "../../../../assets/avatar.png"
 function UserProfile() {
   return (
     <div id="doctor-details" className='hidden md:block w-[44%] border-e-4 h-full'>
-        <h4 className='mt-6 text-sm font-semibold text-center font-inter sm:text-lg'> Dr Zerebyakov Elivish</h4>
+        <h4 className='mt-6 text-sm font-semibold text-center font-inter sm:text-lg'>You are speaking with</h4>
 
         <div className='grid justify-center mt-8'>
           <img className='mx-auto' src={profileAvatar} alt="" />

@@ -1,3 +1,3 @@
-let excludeUrl = ['/dashboard/consult-doctor',];
+let excludeUrl = ['/dashboard/consult-doctor', '/dashboard/how-to-use'];
 
 export default excludeUrl;

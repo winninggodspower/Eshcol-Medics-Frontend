@@ -4,39 +4,41 @@ function HowTo() {
     return (
         <div className='flex h-full grow'>
 
-            <div className='h-full grow md:border-e-4 font-inter'>
-                <div className='flex'>
+            <div className='h-full grow md:border-e-4'>
+                <div className='flex items-center gap-2 border-b ps-3 py-[15px] md:py-9 md:ps-14 border-[rgba(0,0,0,0.23)]'>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 12H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M12 19L5 12L12 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <h2>How To Use?</h2>
+                    <h2 className="text-lg font-bold md:text-xl font-railway">How To Use?</h2>
                 </div>
 
-                <div>
-                    <h4>Step 1:</h4> Select a feature you’d like to use from the
-                    dashboard
-                    <h4>Step 2:</h4> Follow the prompts to use or communicate
-                    with customer service
-                </div>
+                <div className="text-base md:text-lg leading-[30px] font-inter font-medium mx-9 md:mx-10" >
+                    <div className="mt-9">
+                        <p><span className="font-semibold">Step 1:</span> Select a feature you’d like to use from the
+                        dashboard</p>
+                        <p className="mt-[11px]"><span className="font-semibold">Step 2:</span> Follow the prompts to use or communicate
+                        with customer service</p>
+                    </div>
 
-                <div>
-                    <h3>For medical checkups: </h3>
-                    Step 1: Go to dashboard
-                    Step 2: Select consult a doctor
-                    Step 3: communicate your symptoms with the doctor
-                    Follow the doctors advice and get your diagnosis
-                </div>
+                    <div className=" mt-7 md:mt-[47px]">
+                        <h3 className="font-semibold">For medical checkups: </h3>
+                        <p className="mb-1">Step 1: Go to dashboard</p>
+                        <p className="mb-1">Step 2: Select consult a doctor</p>
+                        <p className="mb-1">Step 3: communicate your symptoms with the doctor</p>
+                        <p className="mb-1">Follow the doctors advice and get your diagnosis</p>
+                    </div>
 
-                <h3>For emergency services: </h3>
+                    <h3 className="mt-7 font-semibold md:mt-[39px]">For emergency services: </h3>
 
-                <div>
-                    <h3>Step 1: Select Emergency services </h3>
-                    You’ll be connected to an available emergency specialist
-                    on a video call.
-                    Make sure to follow the instructions of the specialist and
-                    rush to a nearby hospital if the emergency situation is
-                    handled as you may still need a check up
+                    <div className="mt-3 mb-3 md:mt-9">
+                        <h3 className="mb-3 font-semibold md:mb-11">Step 1: Select Emergency services </h3>
+                       <p> You’ll be connected to an available emergency specialist</p>
+                        on a video call. <br />
+                        Make sure to follow the instructions of the specialist and
+                        rush to a nearby hospital if the emergency situation is
+                        handled as you may still need a check up
+                    </div>
                 </div>
             </div>
 
