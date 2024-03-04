@@ -33,6 +33,7 @@ import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/Revi
 import PatientServices from "./pages/dashboard/Services";
 import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 import HowTo from "./pages/dashboard/HowTo";
+import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -57,6 +58,7 @@ const router = createBrowserRouter(
         <Route path="services" element={<PatientServices/>}/>
         <Route path="consult-doctor" element={<ConsultDoctor/>} />
         <Route path="how-to-use" element={<HowTo/>} />
+        <Route path="mediacal-priscriptions" element={<MedicalPrescription/>} />
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>
