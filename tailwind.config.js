@@ -22,6 +22,7 @@ export default {
         'grey-4': 'rgba(217, 217, 217, 1)',
         'grey-5': 'rgba(124, 140, 147, 1)',
         'grey-6': 'rgba(0, 0, 0, 0.3)',
+        'grey-7': 'rgba(0, 0, 0, 0.5)',
       },
       fontFamily: {
         'inter': ['inter', 'sans-serif'],
