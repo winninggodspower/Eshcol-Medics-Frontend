@@ -58,7 +58,7 @@ const router = createBrowserRouter(
         <Route path="services" element={<PatientServices/>}/>
         <Route path="consult-doctor" element={<ConsultDoctor/>} />
         <Route path="how-to-use" element={<HowTo/>} />
-        <Route path="mediacal-priscriptions" element={<MedicalPrescription/>} />
+        <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>
