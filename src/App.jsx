@@ -35,6 +35,7 @@ import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 import HowTo from "./pages/dashboard/HowTo";
 import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings";
+import CustomerServiceSidebarLayout from "./layouts/CustomerServiceSidebarLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -60,7 +61,9 @@ const router = createBrowserRouter(
         <Route path="consult-doctor" element={<ConsultDoctor/>} />
         <Route path="how-to-use" element={<HowTo/>} />
         <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
-        <Route path="settings" element={<Settings/>} />
+        <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
+          <Route index element={<Settings/>} />
+        </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>
