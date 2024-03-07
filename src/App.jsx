@@ -8,8 +8,7 @@ import {
 // layouts
 import RootLayout from './layouts/RootLayout';
 import DashboardLayout from "./layouts/DashboardLayout";
-
-import ProtectedRoute from "./utils/protectedRoute";
+import CustomerServiceSidebarLayout from "./layouts/CustomerServiceSidebarLayout";
 
 // pages
 import RegisterPatient from './pages/Register/RegisterPatient';
@@ -20,13 +19,6 @@ import RegisterIndividualOrHospital from "./pages/dashboard/Register/ExpertPages
 import SearchForHospital from "./pages/dashboard/Register/ExpertPages/SearchForHospital";
 import RegisterHospital from "./pages/dashboard/Register/ExpertPages/RegisterHospital";
 import HostpitalOwnerShipInformation from "./pages/dashboard/Register/ExpertPages/HostpitalOwnerShipInformation";
-
-import Cookies from 'js-cookie';
-import { useEffect, useState } from "react";
-import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
-
-import { useDispatch } from "react-redux";
-import { clearCredentials, setCredentails } from "./redux/authSlice";
 import Logout from "./pages/Logout";
 import Registration from "./pages/dashboard/Register/Registration";
 import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/ReviewInProgress";
@@ -35,7 +27,17 @@ import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 import HowTo from "./pages/dashboard/HowTo";
 import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings";
-import CustomerServiceSidebarLayout from "./layouts/CustomerServiceSidebarLayout";
+import PersonalInfomationSettings from "./pages/dashboard/Settings/PersonalInfomationSettings";
+
+import ProtectedRoute from "./utils/protectedRoute";
+
+import Cookies from 'js-cookie';
+import { useEffect, useState } from "react";
+import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
+
+import { useDispatch } from "react-redux";
+import { clearCredentials, setCredentails } from "./redux/authSlice";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -63,6 +65,7 @@ const router = createBrowserRouter(
         <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
         <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
           <Route index element={<Settings/>} />
+          <Route path="personal-information" element={<PersonalInfomationSettings/>} />
         </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />
