@@ -27,7 +27,7 @@ function Settings() {
         </div>
 
         <div className='mt-[42px] md:mt-[34px] font-inter'>
-          <div className="flex justify-between border w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8">
+          <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8">
             <div className='flex items-center text-sm gap-7 md:text-xl'>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="17.5" cy="17.5" r="17.5" fill="#352E43" />
@@ -50,7 +50,7 @@ function Settings() {
             </Link>
           </div>
 
-          <div className="flex justify-between border w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
+          <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
             <div className='flex items-center text-sm gap-7 md:text-xl'>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="17.5" cy="17.5" r="17.5" fill="#352E43" />
@@ -69,7 +69,7 @@ function Settings() {
             <EditIcon />
           </div>
 
-          <div className="flex justify-between border w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
+          <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
             <div className='flex items-center text-sm gap-7 md:text-xl'>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="17.5" cy="17.5" r="17.5" fill="#352E43" />
@@ -81,7 +81,7 @@ function Settings() {
             <EditIcon />
           </div>
 
-          <div className="flex justify-between border w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
+          <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
             <div className='flex items-center text-sm gap-7 md:text-xl'>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="17.5" cy="17.5" r="17.5" fill="#352E43" />
