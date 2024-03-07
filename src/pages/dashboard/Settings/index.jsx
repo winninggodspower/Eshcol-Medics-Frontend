@@ -15,7 +15,7 @@ function EditIcon() {
 
 function Settings() {
   return (
-    <div className='flex h-full grow'>
+    <div className='flex h-full grow min-h-[calc(100vh-4.65rem)]'>
 
       <div className='h-full bg-white grow md:border-e-4'>
         <div className='flex items-center gap-2 border-b ps-3 py-[15px] md:py-9 md:ps-14 border-[rgba(0,0,0,0.23)]'>
