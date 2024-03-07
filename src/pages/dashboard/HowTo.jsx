@@ -1,21 +1,13 @@
-import { useNavigate } from "react-router-dom"
 import CustomerService from "../../components/CustomerService";
+import CustomPageHeader from "../../components/CustomPageHeader";
 
 function HowTo() {
-
-    let navigate = useNavigate();
 
     return (
         <div className='flex h-full grow'>
 
             <div className='h-full bg-white grow md:border-e-4'>
-                <div className='flex items-center gap-2 border-b ps-3 py-[15px] md:py-9 md:ps-14 border-[rgba(0,0,0,0.23)]'>
-                    <svg onClick={()=>navigate(-1)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 12H5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M12 19L5 12L12 5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <h2 className="text-lg font-bold md:text-xl font-railway">How To Use?</h2>
-                </div>
+                <CustomPageHeader title={'How To Use?'} />
 
                 <div className="text-base md:text-lg leading-[30px] font-inter font-medium mx-9 md:mx-10" >
                     <div className="mt-9">
