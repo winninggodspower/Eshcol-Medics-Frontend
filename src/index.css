@@ -47,7 +47,7 @@
       @apply rounded-full w-[6.25rem] h-[6.25rem] md:w-[8rem] md:h-[8rem] grid place-items-center;
     }
 
-    .hide-date-picker-icon::-webkit-calendar-picker-indicator {
+    input[type="date"]::-webkit-calendar-picker-indicator {
       display: none;
     }
 
