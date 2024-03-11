@@ -10,7 +10,7 @@ function RootLayout() {
         <>
             <Navbar />
             <Outlet />
-            {!excludeUrl.includes(location.pathname) &&
+            {!excludeUrl.some((url)=>location.pathname.startsWith(url))  &&
                 <MobileOnlyFooter />
             }
         </>
