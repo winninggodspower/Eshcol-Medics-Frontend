@@ -26,7 +26,7 @@ import PatientServices from "./pages/dashboard/Services";
 import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 import HowTo from "./pages/dashboard/HowTo";
 import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
-import Settings from "./pages/dashboard/Settings";
+import Settings from "./pages/dashboard/Settings/Settings";
 import PersonalInfomationSetting from "./pages/dashboard/Settings/PersonalInfomationSetting";
 import BillingInformationSetting from "./pages/dashboard/Settings/BillingInformationSetting";
 import NextOfKinSetting from "./pages/dashboard/Settings/NextOfKinSetting";

@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import CustomPageHeader from "../../../components/CustomPageHeader";
 import SettingInput from "../../../components/Setting/SettingInput";
 
 function PersonalInfomationSetting() {
 
   return (
-    <div className='bg-white grow md:border-e-4'>
+    <div className='relative bg-white grow md:border-e-4'>
       <CustomPageHeader title={'Personal information'} />
 
-      <div className="font-inter mt-11 md:mt-[54px] ">
+      <div className="font-inter mt-11 md:mt-[54px] w-[80%] md:w-[84%] max-w-[519px] mx-auto">
 
         <SettingInput label={'Full name'} defaultValue={'Wade Justin Warren'} type={'text'} />
 
@@ -17,6 +18,11 @@ function PersonalInfomationSetting() {
 
         <SettingInput label={'Home address'} defaultValue={'No 4 anyt drive, Dakota'} type={'text'} />
 
+      </div>
+
+      <div className="absolute bottom-0 flex justify-between w-[80%] md:w-[84%] max-w-[519px] pb-40 mx-auto left-[50%] -translate-x-[50%]">
+        <button className="opacity-50 btn-short bg-secondary" disabled>Prev</button>
+        <Link to={'/dashboard/settings/billing-information'} className="btn-short bg-secondary">Next</Link>
       </div>
     </div>
   )
