@@ -79,7 +79,9 @@ function Settings() {
               </svg>
               Next of kin
             </div>
-            <EditIcon />
+            <Link to={'next-of-kin'} >
+              <EditIcon />
+            </Link>
           </div>
 
           <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">

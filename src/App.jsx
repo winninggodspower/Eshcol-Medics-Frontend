@@ -29,6 +29,7 @@ import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings";
 import PersonalInfomationSetting from "./pages/dashboard/Settings/PersonalInfomationSetting";
 import BillingInformationSetting from "./pages/dashboard/Settings/BillingInformationSetting";
+import NextOfKinSetting from "./pages/dashboard/Settings/NextOfKinSetting";
 
 import ProtectedRoute from "./utils/protectedRoute";
 
@@ -68,6 +69,7 @@ const router = createBrowserRouter(
           <Route index element={<Settings/>} />
           <Route path="personal-information" element={<PersonalInfomationSetting/>} />
           <Route path="billing-information" element={<BillingInformationSetting/>} />
+          <Route path="next-of-kin" element={<NextOfKinSetting/>} />
         </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />

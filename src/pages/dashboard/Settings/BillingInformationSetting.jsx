@@ -12,7 +12,7 @@ function BillingInformationSetting() {
 
         <SettingInput label={'Expiry date'} defaultValue={'19/07'} type={'date'} />
 
-        <SettingInput label={'CVV'} placeholder={'XXX'} type={'number'} />
+        <SettingInput label={'CVV'} defaultValue={'XXX'} placeholder="XXX" type={'number'} />
 
       </div>
     </div>
