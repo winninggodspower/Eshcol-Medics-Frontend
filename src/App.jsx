@@ -39,6 +39,7 @@ import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 
 import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
+import SecuritySetting from "./pages/dashboard/Settings/SecuritySetting";
 
 
 const router = createBrowserRouter(
@@ -70,6 +71,7 @@ const router = createBrowserRouter(
           <Route path="personal-information" element={<PersonalInfomationSetting/>} />
           <Route path="billing-information" element={<BillingInformationSetting/>} />
           <Route path="next-of-kin" element={<NextOfKinSetting/>} />
+          <Route path="security" element={<SecuritySetting/>} />
         </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />

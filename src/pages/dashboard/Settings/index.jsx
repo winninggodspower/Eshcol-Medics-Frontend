@@ -98,10 +98,11 @@ function Settings() {
                   </clipPath>
                 </defs>
               </svg>
-
               Security
             </div>
-            <EditIcon />
+            <Link to={'security'} >
+              <EditIcon />
+            </Link>
           </div>
 
         </div>
