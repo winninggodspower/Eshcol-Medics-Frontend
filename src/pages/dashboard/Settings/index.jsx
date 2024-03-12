@@ -1,5 +1,4 @@
 import avatarImage from "../../../assets/avatar-2.png"
-import SettingsSection from './SettingsSection'
 import { Link } from "react-router-dom";
 import CustomPageHeader from "../../../components/CustomPageHeader";
 
@@ -66,7 +65,9 @@ function Settings() {
               </svg>
               Billing information
             </div>
-            <EditIcon />
+            <Link to={'billing-information'} >
+              <EditIcon />
+            </Link>
           </div>
 
           <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8 mt-[15px]">
