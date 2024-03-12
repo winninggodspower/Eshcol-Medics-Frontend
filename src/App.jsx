@@ -27,7 +27,7 @@ import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 import HowTo from "./pages/dashboard/HowTo";
 import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings";
-import PersonalInfomationSettings from "./pages/dashboard/Settings/PersonalInfomationSettings";
+import PersonalInfomationSetting from "./pages/dashboard/Settings/PersonalInfomationSetting";
 
 import ProtectedRoute from "./utils/protectedRoute";
 
@@ -65,7 +65,7 @@ const router = createBrowserRouter(
         <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
         <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
           <Route index element={<Settings/>} />
-          <Route path="personal-information" element={<PersonalInfomationSettings/>} />
+          <Route path="personal-information" element={<PersonalInfomationSetting/>} />
         </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />

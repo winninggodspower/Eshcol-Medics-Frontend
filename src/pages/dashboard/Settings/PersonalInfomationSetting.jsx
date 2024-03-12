@@ -2,7 +2,7 @@ import CustomPageHeader from "../../../components/CustomPageHeader";
 import SettingInput from "../../../components/Setting/SettingInput";
 import EditIcon from "../../../components/Setting/EditIcon";
 
-function PersonalInfomationSettings() {
+function PersonalInfomationSetting() {
 
   return (
     <div className='bg-white grow md:border-e-4'>
@@ -23,4 +23,4 @@ function PersonalInfomationSettings() {
   )
 }
 
-export default PersonalInfomationSettings
+export default PersonalInfomationSetting
