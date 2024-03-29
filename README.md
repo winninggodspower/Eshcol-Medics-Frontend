@@ -1,8 +1,24 @@
-# React + Vite
+# Eshcol-Medics Software Frontend
+eshcol-medics is a medical software meant to get patient in front of expert using the software.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Requirement
+This software make's use of jwt authentication (access and refresh token), with token rotation for authentication.
 
-Currently, two official plugins are available:
+### Libraries Used
+- **redux**: for statemanagement
+- **tailwindcss**: styling library
+- **axios**: used for sending request
+- **react-hook-form**: used for easy handling of forms
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> if you don't know how to used the above libraries, kindly check out the documentation.
+
+___
+
+## Installation Guidelines
+follow the steps below to instal and run this software
+1. First of all clone this repo
+2. Navigate to the project folder by running `>cd ESHCOL-MEDICS-FRONTEND`
+3. run `>npm install`, to install dependencies
+4. next run `>npm run dev`, and you'll get an output similar to the one below
+
+5. navigate to **localhost:3153** to view the project
