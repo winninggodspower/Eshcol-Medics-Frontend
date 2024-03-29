@@ -11,8 +11,8 @@ async function handleFormRegister(data, setError, is_expert=false) {
         });
 
         if (response.status === 201){
-            console.log('redirecting to dashboard');
-            return redirect('/dashboard');
+            clearErrors();
+            return response;
         }
         else {
             setMultipleError(res.data, setError);

@@ -12,6 +12,7 @@ export default {
       colors: {
         'secondary': '#352E43',
         'main': '#055C9F',
+        'tertiary': '#394FE1',
         'Green': '#079E16',
         'Green-2': '#567867',
         'Green-3': '#0CF607',
@@ -21,6 +22,8 @@ export default {
         'grey-4': 'rgba(217, 217, 217, 1)',
         'grey-5': 'rgba(124, 140, 147, 1)',
         'grey-6': 'rgba(0, 0, 0, 0.3)',
+        'grey-7': 'rgba(0, 0, 0, 0.5)',
+        'grey-8': 'rgba(0, 0, 0, 0.4)',
       },
       fontFamily: {
         'inter': ['inter', 'sans-serif'],

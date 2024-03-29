@@ -26,7 +26,11 @@ function RegisterPatient() {
                         <p className="text-base font-normal text-center md:text-lg opacity-90 font-raleway">And gain access to 400k worldwide medical specialists medical freedom</p>
 
                         <form className="form" onSubmit={handleSubmit(async (data)=>{
-                            await handleFormRegister(data, setError);
+                            let response = await handleFormRegister(data, setError);
+                            if (response) {
+                                console.log('redirecting to dashboard');
+                                return redirect('/login');
+                            }
                         })}>
                             <input className="w-full rounded-md custom-input h-11 bg-grey-2 invalid:border-red-400" type="email" {...register('email', {required: "This field is required"})} placeholder="Email address" />
                             <p className="w-full text-start text-red-600" >{errors.email?.message}</p>

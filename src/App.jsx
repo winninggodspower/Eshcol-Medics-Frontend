@@ -8,8 +8,7 @@ import {
 // layouts
 import RootLayout from './layouts/RootLayout';
 import DashboardLayout from "./layouts/DashboardLayout";
-
-import ProtectedRoute from "./utils/protectedRoute";
+import CustomerServiceSidebarLayout from "./layouts/CustomerServiceSidebarLayout";
 
 // pages
 import RegisterPatient from './pages/Register/RegisterPatient';
@@ -20,6 +19,19 @@ import RegisterIndividualOrHospital from "./pages/dashboard/Register/ExpertPages
 import SearchForHospital from "./pages/dashboard/Register/ExpertPages/SearchForHospital";
 import RegisterHospital from "./pages/dashboard/Register/ExpertPages/RegisterHospital";
 import HostpitalOwnerShipInformation from "./pages/dashboard/Register/ExpertPages/HostpitalOwnerShipInformation";
+import Logout from "./pages/Logout";
+import Registration from "./pages/dashboard/Register/Registration";
+import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/ReviewInProgress";
+import PatientServices from "./pages/dashboard/Services";
+import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
+import HowTo from "./pages/dashboard/HowTo";
+import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
+import Settings from "./pages/dashboard/Settings/Settings";
+import PersonalInfomationSetting from "./pages/dashboard/Settings/PersonalInfomationSetting";
+import BillingInformationSetting from "./pages/dashboard/Settings/BillingInformationSetting";
+import NextOfKinSetting from "./pages/dashboard/Settings/NextOfKinSetting";
+
+import ProtectedRoute from "./utils/protectedRoute";
 
 import Cookies from 'js-cookie';
 import { useEffect, useState } from "react";
@@ -27,11 +39,8 @@ import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 
 import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
-import Logout from "./pages/Logout";
-import Registration from "./pages/dashboard/Register/Registration";
-import ReviewInProgress from "./pages/dashboard/Register/ExpertRegistration/ReviewInProgress";
-import PatientServices from "./pages/dashboard/Services";
-import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
+import SecuritySetting from "./pages/dashboard/Settings/SecuritySetting";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +64,15 @@ const router = createBrowserRouter(
         <Route path="review-in-progress" element={<ReviewInProgress/>} />
         <Route path="services" element={<PatientServices/>}/>
         <Route path="consult-doctor" element={<ConsultDoctor/>} />
+        <Route path="how-to-use" element={<HowTo/>} />
+        <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
+        <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
+          <Route index element={<Settings/>} />
+          <Route path="personal-information" element={<PersonalInfomationSetting/>} />
+          <Route path="billing-information" element={<BillingInformationSetting/>} />
+          <Route path="next-of-kin" element={<NextOfKinSetting/>} />
+          <Route path="security" element={<SecuritySetting/>} />
+        </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />
     </Route>
