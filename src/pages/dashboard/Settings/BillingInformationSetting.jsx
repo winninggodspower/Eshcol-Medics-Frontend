@@ -4,7 +4,7 @@ import SettingInput from "../../../components/Setting/SettingInput";
 
 function BillingInformationSetting() {
   return (
-    <div className='bg-white grow md:border-e-4'>
+    <div className='relative bg-white grow md:border-e-4'>
       <CustomPageHeader title={'Billing information'} />
 
       <div className="font-inter mt-11 md:mt-[54px] w-[80%] md:w-[84%] max-w-[519px] mx-auto">

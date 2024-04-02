@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function NextOfKinSetting() {
   return (
-    <div className='bg-white grow md:border-e-4'>
+    <div className='relative bg-white grow md:border-e-4'>
       <CustomPageHeader title={'Next Of Kin'} />
 
       <div className="font-inter mt-11 md:mt-[54px] w-[80%] md:w-[84%] max-w-[519px] mx-auto">

@@ -25,7 +25,7 @@ function Settings() {
           </div>
         </div>
 
-        <div className='mt-[42px] md:mt-[34px] font-inter'>
+        <div className='mt-[42px] md:my-[34px] font-inter'>
           <div className="flex justify-between border border-grey-8 w-[90%] md:w-[83%] max-w-[519px] mx-auto py-5 px-8">
             <div className='flex items-center text-sm gap-7 md:text-xl'>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
