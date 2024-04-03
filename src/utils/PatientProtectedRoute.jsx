@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Navigate, Outlet } from 'react-router-dom';
 
-function ExpertProtectedRoute() {
+function PatientProtectedRoute() {
     const userType = useSelector((state)=> state.auth.userInformation.user_type)
     console.log(userType);
     return (
@@ -12,4 +12,4 @@ function ExpertProtectedRoute() {
       );
 }
 
-export default ExpertProtectedRoute;
+export default PatientProtectedRoute;
