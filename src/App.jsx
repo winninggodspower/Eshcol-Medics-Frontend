@@ -27,9 +27,11 @@ import ConsultDoctor from "./pages/dashboard/Services/ConsultDoctor";
 import HowTo from "./pages/dashboard/HowTo";
 import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings/Settings";
-import PersonalInfomationSetting from "./pages/dashboard/Settings/PersonalInfomationSetting";
-import BillingInformationSetting from "./pages/dashboard/Settings/BillingInformationSetting";
-import NextOfKinSetting from "./pages/dashboard/Settings/NextOfKinSetting";
+
+import PersonalInfomationSetting from "./pages/dashboard/Settings/PatientSetting/PersonalInfomationSetting";
+import BillingInformationSetting from "./pages/dashboard/Settings/PatientSetting/BillingInformationSetting";
+import NextOfKinSetting from "./pages/dashboard/Settings/PatientSetting/NextOfKinSetting";
+import SecuritySetting from "./pages/dashboard/Settings/PatientSetting/SecuritySetting";
 
 import ProtectedRoute from "./utils/protectedRoute";
 
@@ -39,7 +41,8 @@ import FetchAccessTokenFromServer from "./utils/FetchAccessToken";
 
 import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
-import SecuritySetting from "./pages/dashboard/Settings/SecuritySetting";
+import ExpertProtectedRoute from "./utils/ExpertProtectedRoute";
+import PatientProtectedRoute from "./utils/PatientProtectedRoute";
 
 
 const router = createBrowserRouter(
@@ -68,10 +71,12 @@ const router = createBrowserRouter(
         <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
         <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
           <Route index element={<Settings/>} />
-          <Route path="personal-information" element={<PersonalInfomationSetting/>} />
-          <Route path="billing-information" element={<BillingInformationSetting/>} />
-          <Route path="next-of-kin" element={<NextOfKinSetting/>} />
-          <Route path="security" element={<SecuritySetting/>} />
+          <Route element={<PatientProtectedRoute/>}>
+            <Route path="personal-information" element={<PersonalInfomationSetting/>} />
+            <Route path="billing-information" element={<BillingInformationSetting/>} />
+            <Route path="next-of-kin" element={<NextOfKinSetting/>} />
+            <Route path="security" element={<SecuritySetting/>} />
+          </Route>
         </Route>
       </Route>
       <Route path='/logout' element={<Logout/>} />

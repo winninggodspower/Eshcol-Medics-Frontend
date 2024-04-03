@@ -47,6 +47,10 @@
       @apply rounded-full w-[6.25rem] h-[6.25rem] md:w-[8rem] md:h-[8rem] grid place-items-center;
     }
 
+    .setting-bottom-btn-container{
+      @apply absolute bottom-0 flex justify-between w-[80%] md:w-[84%] max-w-[519px] pb-16 md:pb-28 xl:pb-40 mx-auto left-[50%] -translate-x-[50%];
+    }
+
     input[type="date"]::-webkit-calendar-picker-indicator {
       display: none;
     }
