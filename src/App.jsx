@@ -71,11 +71,14 @@ const router = createBrowserRouter(
         <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
         <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
           <Route index element={<Settings/>} />
-          <Route element={<PatientProtectedRoute/>}>
+          <Route path="patient" element={<PatientProtectedRoute/>}>
             <Route path="personal-information" element={<PersonalInfomationSetting/>} />
             <Route path="billing-information" element={<BillingInformationSetting/>} />
             <Route path="next-of-kin" element={<NextOfKinSetting/>} />
             <Route path="security" element={<SecuritySetting/>} />
+          </Route>
+          <Route element={<ExpertProtectedRoute/>} >
+          
           </Route>
         </Route>
       </Route>

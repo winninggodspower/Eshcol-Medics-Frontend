@@ -16,7 +16,7 @@ function SecuritySetting() {
       </div>
 
       <div className="setting-bottom-btn-container">
-        <Link to={'/dashboard/settings/next-of-kin'} className="btn-short bg-secondary">Prev</Link>
+        <Link to={'/dashboard/settings/patient/next-of-kin'} className="btn-short bg-secondary">Prev</Link>
         <Link to={''} className="btn-short bg-secondary">Finish</Link>
       </div>
     </div>

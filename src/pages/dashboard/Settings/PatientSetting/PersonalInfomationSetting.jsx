@@ -22,7 +22,7 @@ function PersonalInfomationSetting() {
 
       <div className="setting-bottom-btn-container">
         <button className="opacity-50 btn-short bg-secondary" disabled>Prev</button>
-        <Link to={'/dashboard/settings/billing-information'} className="btn-short bg-secondary">Next</Link>
+        <Link to={'/dashboard/settings/patient/billing-information'} className="btn-short bg-secondary">Next</Link>
       </div>
     </div>
   )

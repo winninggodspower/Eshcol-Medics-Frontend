@@ -18,8 +18,8 @@ function NextOfKinSetting() {
       </div>
 
       <div className="setting-bottom-btn-container">
-        <Link to={'/dashboard/settings/billing-information'} className="btn-short bg-secondary">Prev</Link>
-        <Link to={'/dashboard/settings/security'} className="btn-short bg-secondary">Next</Link>
+        <Link to={'/dashboard/settings/patient/billing-information'} className="btn-short bg-secondary">Prev</Link>
+        <Link to={'/dashboard/settings/patient/security'} className="btn-short bg-secondary">Next</Link>
       </div>
     </div>
   )
