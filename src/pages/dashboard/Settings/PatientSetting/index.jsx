@@ -44,7 +44,7 @@ function PatientSettings() {
               </svg>
               Personal information
             </div>
-            <Link to={'personal-information'} >
+            <Link to={'patient/personal-information'} >
               <EditIcon />
             </Link>
           </div>
@@ -65,7 +65,7 @@ function PatientSettings() {
               </svg>
               Billing information
             </div>
-            <Link to={'billing-information'} >
+            <Link to={'patient/billing-information'} >
               <EditIcon />
             </Link>
           </div>
@@ -79,7 +79,7 @@ function PatientSettings() {
               </svg>
               Next of kin
             </div>
-            <Link to={'next-of-kin'} >
+            <Link to={'patient/next-of-kin'} >
               <EditIcon />
             </Link>
           </div>
@@ -100,7 +100,7 @@ function PatientSettings() {
               </svg>
               Security
             </div>
-            <Link to={'security'} >
+            <Link to={'patient/security'} >
               <EditIcon />
             </Link>
           </div>
