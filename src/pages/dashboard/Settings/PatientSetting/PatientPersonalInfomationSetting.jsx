@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CustomPageHeader from "../../../../components/CustomPageHeader";
 import SettingInput from "../../../../components/Setting/SettingInput";
 
-function PersonalInfomationSetting() {
+function PatientPersonalInfomationSetting() {
 
   return (
     <div className='relative bg-white grow md:border-e-4'>
@@ -28,4 +28,4 @@ function PersonalInfomationSetting() {
   )
 }
 
-export default PersonalInfomationSetting
+export default PatientPersonalInfomationSetting

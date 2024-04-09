@@ -44,7 +44,7 @@ function ExpertSettings() {
               </svg>
               Personal information
             </div>
-            <Link to={'personal-information'} >
+            <Link to={'expert/personal-information'} >
               <EditIcon />
             </Link>
           </div>
@@ -65,7 +65,7 @@ function ExpertSettings() {
               </svg>
               Payment information
             </div>
-            <Link to={'billing-information'} >
+            <Link to={'expert/payment-information'} >
               <EditIcon />
             </Link>
           </div>
@@ -79,7 +79,7 @@ function ExpertSettings() {
               </svg>
               Medical details
             </div>
-            <Link to={'next-of-kin'} >
+            <Link to={'expert/medical-department'} >
               <EditIcon />
             </Link>
           </div>
@@ -100,7 +100,7 @@ function ExpertSettings() {
               </svg>
               Security
             </div>
-            <Link to={'security'} >
+            <Link to={'expert/security'} >
               <EditIcon />
             </Link>
           </div>

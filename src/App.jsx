@@ -28,7 +28,7 @@ import HowTo from "./pages/dashboard/HowTo";
 import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings/Settings";
 
-import PersonalInfomationSetting from "./pages/dashboard/Settings/PatientSetting/PersonalInfomationSetting";
+import PatientPersonalInfomationSetting from "./pages/dashboard/Settings/PatientSetting/PatientPersonalInfomationSetting";
 import BillingInformationSetting from "./pages/dashboard/Settings/PatientSetting/BillingInformationSetting";
 import NextOfKinSetting from "./pages/dashboard/Settings/PatientSetting/NextOfKinSetting";
 import SecuritySetting from "./pages/dashboard/Settings/PatientSetting/SecuritySetting";
@@ -43,6 +43,10 @@ import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
 import ExpertProtectedRoute from "./utils/ExpertProtectedRoute";
 import PatientProtectedRoute from "./utils/PatientProtectedRoute";
+import ExpertPersonalInfomationSetting from "./pages/dashboard/Settings/ExpertSetting/ExpertPersonalInformationSetting";
+import PaymentInformationSetting from "./pages/dashboard/Settings/ExpertSetting/PaymentInformationSetting";
+import MedicalDepartmentSetting from "./pages/dashboard/Settings/ExpertSetting/MedicalDepartmentSetting";
+import ExpertSecuritySetting from "./pages/dashboard/Settings/ExpertSetting/ExpertSecuritySetting";
 
 
 const router = createBrowserRouter(
@@ -72,13 +76,16 @@ const router = createBrowserRouter(
         <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
           <Route index element={<Settings/>} />
           <Route path="patient" element={<PatientProtectedRoute/>}>
-            <Route path="personal-information" element={<PersonalInfomationSetting/>} />
+            <Route path="personal-information" element={<PatientPersonalInfomationSetting/>} />
             <Route path="billing-information" element={<BillingInformationSetting/>} />
             <Route path="next-of-kin" element={<NextOfKinSetting/>} />
             <Route path="security" element={<SecuritySetting/>} />
           </Route>
-          <Route element={<ExpertProtectedRoute/>} >
-          
+          <Route path="expert" element={<ExpertProtectedRoute/>} >
+          <Route path="personal-information" element={<ExpertPersonalInfomationSetting/>} />
+          <Route path="payment-information" element={<PaymentInformationSetting/>} />
+          <Route path="medical-department" element={<MedicalDepartmentSetting/>} />
+          <Route path="security" element={<ExpertSecuritySetting/>} />
           </Route>
         </Route>
       </Route>

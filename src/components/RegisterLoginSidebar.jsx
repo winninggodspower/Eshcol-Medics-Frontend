@@ -4,7 +4,7 @@ import checkIcon from "../assets/check-icon.svg";
 function RegisterSidebar({points, btnClass, btnText, btnUrl}) {
 
   return (
-    <section id="side-bar" className="register-img hidden w-2/5 md:block text-white h-full" >
+    <section id="side-bar" className="hidden w-2/5 h-full text-white register-img md:block" >
         <div className="mt-[6rem] w-[80%] mx-auto ">
             <h2 className="mb-8 text-4xl font-railway">Gain access to 11k+ patients from all over Africa</h2>
             <ul className="mb-9 ">
