@@ -2,6 +2,7 @@ import ExpertRegistrationProgress from "../../../../components/RegistrationInfor
 import hospitalImage from "../../../../assets/hospital_image.png";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import HospitalDisplay from "../../../../components/HospitalDisplay";
 
 
 function PersonalInformation({ handleNext }) {
@@ -57,11 +58,11 @@ function PersonalInformation({ handleNext }) {
           <div className="w-full mb-7 text-base leading-none font-inter">
             <span className="hidden md:inline">Hospital name</span>
             <div className="w-full rounded-md custom-input bg-grey-2 md:ps-7 ps-5 pe-1 pt-[0.65rem] pb-4 md:py-7 mt-2 md:mt-4">
-              <div className="grid grid-cols-[auto_1fr] md:gap-x-4 gap-x-[0.65rem] md:gap-y-2 gap-y-1">
-                <img className="row-span-2" src={hospitalImage} alt="" />
-                <h4 className=" text-xs md:text-base font-semibold">Acton Crawford Hospital</h4>
-                <p className="text-[0.625rem] md:text-sm font-normal opacity-70" >2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
-              </div>
+              <HospitalDisplay 
+                image={hospitalImage} 
+                name={'Acton Crawford Hospital'} 
+                address={'2972 Westheimer Rd. Santa Ana, Illinois 85486'}
+              />
             </div>
 
           </div>
