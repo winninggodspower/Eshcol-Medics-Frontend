@@ -8,7 +8,7 @@ function Prescribe() {
             <CustomPageHeader title={'Prescriptions'} />
 
             <div className="text-base md:text-lg leading-[30px] font-inter font-medium mx-9 md:mx-10" >
-                
+                d
             </div>
         </div>
     )
