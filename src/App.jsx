@@ -48,6 +48,7 @@ import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
 import ExpertProtectedRoute from "./utils/ExpertProtectedRoute";
 import PatientProtectedRoute from "./utils/PatientProtectedRoute";
+import Prescribe from "./pages/dashboard/Prescribe";
 
 
 const router = createBrowserRouter(
@@ -72,7 +73,10 @@ const router = createBrowserRouter(
         <Route path="review-in-progress" element={<ReviewInProgress/>} />
         <Route path="services" element={<PatientServices/>}/>
         <Route path="consult-doctor" element={<ConsultDoctor/>} />
-        <Route path="how-to-use" element={<HowTo/>} />
+        <Route element={<CustomerServiceSidebarLayout/>}>
+          <Route path="how-to-use" element={<HowTo/>} />
+          <Route path="prescribe" element={<Prescribe/>} />
+        </Route>
         <Route path="medical-prescriptions" element={<MedicalPrescription/>} />
         <Route path="settings" element={<CustomerServiceSidebarLayout/>} >
           <Route index element={<Settings/>} />

@@ -70,7 +70,7 @@ function DashboardSideBar() {
           </svg>
           <p className="text-base leading-none">How to use?</p>
         </NavLink>
-        <NavLink to={`/dashboard/${userInformation.user_type == 'patient' ? 'medical-prescriptions' : 'prescription'}`} className={({ isActive }) => "flex gap-5 border-b-2 py-7 ps-20 " + (isActive && "text-white bg-secondary") }>
+        <NavLink to={`/dashboard/${userInformation.user_type == 'patient' ? 'medical-prescriptions' : 'prescribe'}`} className={({ isActive }) => "flex gap-5 border-b-2 py-7 ps-20 " + (isActive && "text-white bg-secondary") }>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M15 9H9V15H15V9Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
