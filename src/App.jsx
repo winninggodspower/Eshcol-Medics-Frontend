@@ -29,9 +29,14 @@ import MedicalPrescription from "./pages/dashboard/MedicalPrescription";
 import Settings from "./pages/dashboard/Settings/Settings";
 
 import PatientPersonalInfomationSetting from "./pages/dashboard/Settings/PatientSetting/PatientPersonalInfomationSetting";
+import PatientSecuritySetting from "./pages/dashboard/Settings/PatientSetting/PatientSecuritySetting";
+import ExpertPersonalInfomationSetting from "./pages/dashboard/Settings/ExpertSetting/ExpertPersonalInformationSetting";
+import ExpertSecuritySetting from "./pages/dashboard/Settings/ExpertSetting/ExpertSecuritySetting";
+
 import BillingInformationSetting from "./pages/dashboard/Settings/PatientSetting/BillingInformationSetting";
 import NextOfKinSetting from "./pages/dashboard/Settings/PatientSetting/NextOfKinSetting";
-import SecuritySetting from "./pages/dashboard/Settings/PatientSetting/SecuritySetting";
+import PaymentInformationSetting from "./pages/dashboard/Settings/ExpertSetting/PaymentInformationSetting";
+import MedicalDepartmentSetting from "./pages/dashboard/Settings/ExpertSetting/MedicalDepartmentSetting";
 
 import ProtectedRoute from "./utils/protectedRoute";
 
@@ -43,10 +48,6 @@ import { useDispatch } from "react-redux";
 import { clearCredentials, setCredentails } from "./redux/authSlice";
 import ExpertProtectedRoute from "./utils/ExpertProtectedRoute";
 import PatientProtectedRoute from "./utils/PatientProtectedRoute";
-import ExpertPersonalInfomationSetting from "./pages/dashboard/Settings/ExpertSetting/ExpertPersonalInformationSetting";
-import PaymentInformationSetting from "./pages/dashboard/Settings/ExpertSetting/PaymentInformationSetting";
-import MedicalDepartmentSetting from "./pages/dashboard/Settings/ExpertSetting/MedicalDepartmentSetting";
-import ExpertSecuritySetting from "./pages/dashboard/Settings/ExpertSetting/ExpertSecuritySetting";
 
 
 const router = createBrowserRouter(
@@ -79,7 +80,7 @@ const router = createBrowserRouter(
             <Route path="personal-information" element={<PatientPersonalInfomationSetting/>} />
             <Route path="billing-information" element={<BillingInformationSetting/>} />
             <Route path="next-of-kin" element={<NextOfKinSetting/>} />
-            <Route path="security" element={<SecuritySetting/>} />
+            <Route path="security" element={<PatientSecuritySetting/>} />
           </Route>
           <Route path="expert" element={<ExpertProtectedRoute/>} >
           <Route path="personal-information" element={<ExpertPersonalInfomationSetting/>} />

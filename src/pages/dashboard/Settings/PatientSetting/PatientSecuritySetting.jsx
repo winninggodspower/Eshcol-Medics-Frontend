@@ -2,7 +2,7 @@ import CustomPageHeader from "../../../../components/CustomPageHeader";
 import SettingInput from "../../../../components/Setting/SettingInput";
 import { Link } from "react-router-dom";
 
-function SecuritySetting() {
+function PatientSecuritySetting() {
   return (
    <div className='relative bg-white grow md:border-e-4'>
       <CustomPageHeader title={'Security'} />
@@ -23,4 +23,4 @@ function SecuritySetting() {
   )
 }
 
-export default SecuritySetting
+export default PatientSecuritySetting
